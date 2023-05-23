@@ -53,7 +53,7 @@ const rackets =  [
         "price": 118100,
         "category": "rackets",
         "brand": "babolat",
-        "img": "https://http2.mlstatic.com/D_NQ_NP_875962-MLA69500756770_052023-O.webp"
+        "img": "https://http2.mlstatic.com/D_NQ_NP_742771-MLA69428331636_052023-O.webp"
     }, 
     { 
         "id": 8,

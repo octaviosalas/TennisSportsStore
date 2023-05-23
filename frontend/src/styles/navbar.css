@@ -1,0 +1,52 @@
+
+.conteiner-gral-nav {
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    padding: 10px 20px;
+    background-color: rgb(30, 28, 28);
+  }
+
+  
+  
+  .conteiner-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   
+  }
+  
+  .cont-pb {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .my-tasks,
+  .my-pendt,
+  .my-finish {
+    font-size: 14px;
+    font-weight: bold;
+    color: #ee644c;
+    text-decoration: none;
+    transition-duration: 0.3s;
+  }
+  
+  .my-tasks:hover,
+  .my-pendt:hover,
+  .my-finish:hover {
+    color: #ee644c;
+  }
+  
+  .img-logo {
+    width: 40px;
+    height: 36px;
+    cursor: pointer;
+    margin-right: 20px;
+  }
+  
+  .img-logo:hover {
+    transform: scale(1.1);
+  }
