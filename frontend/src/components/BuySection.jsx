@@ -1,12 +1,17 @@
 import React, { useState } from 'react'
 import "../styles/buysections.css"
-import CartContext from '../store/cart.context.js'
 import { useContext } from 'react'
+import CartContext from '../store/cart.context.js'
+import FinishBuy from './FinishBuy'
 
-const BuySection = () => {
 
-    const [quantity, setQuantity] = useState(0)
+const BuySection = ({addToCart}) => {
 
+    const [quantity, setQuantity] = useState(0) //esta cantidad es la que va a recibir mi carrito
+
+    const carritoCtx = useContext(CartContext)
+
+  
     const addOne = () => { 
         setQuantity(quantity + 1)
     }
@@ -15,12 +20,6 @@ const BuySection = () => {
          setQuantity(quantity - 1)
     }
 
-   // const cartContext = useContext(CartContext)
-
-    /*const addToCart = (prod) => { 
-        cartContext.addProduct(prod)
-        console.log(cartContext.products)
-    }*/
 
   return (
     <div className='gral-buy'>
@@ -31,10 +30,15 @@ const BuySection = () => {
       
       <div className='bottom-section'>
         <button className='btn-acumulate' onClick={() => addOne()}>+</button>
-        <button className='btn-buy' >Agregar al Carrito</button>
+
+        <button className='btn-buy' onClick={() => addToCart(quantity)}>Agregar al Carrito</button> 
+
         <button className='btn-rest' onClick={() => restOne()}>-</button>
       </div>
+        {carritoCtx.products.length >= 1 ? <FinishBuy /> : null}
     </div>
+   
+         
   </div>
   )
 }

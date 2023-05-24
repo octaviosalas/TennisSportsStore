@@ -1,0 +1,94 @@
+
+.title-conteiner {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .tabla {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .tr-item {
+    background-color: #ee644c;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .seccion {
+    padding: 10px;
+  }
+  
+  .remera-dato {
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .img-reme {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    border-radius: 8px;
+  }
+  
+  .btn-eliminar {
+    background-color: #ee644c;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  .btn-eliminar:hover {
+    background-color: #a95142;
+  }
+  
+  /* Nuevos estilos */
+  
+  
+  .remera-dato {
+    background-color: #fffefe;
+    border-radius: 8px;
+  }
+  
+  .name-product,
+  .price-prod {
+    background-color: #ee644c;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-weight: bold;
+  }
+  
+  .price-prod {
+    margin-top: 5px;
+  }
+  
+  
+.btn-eliminar {
+    background-color: #a95142;
+    border: none;
+    color: white;
+    padding: 5px;
+    font-size: 14px;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-top: 40px;
+  }
+  
+  .btn-eliminar:hover {
+    background-color: #913b32;
+  }
+
+  .tr-detail { 
+  
+    width: 100px;
+  }
+
+  .go-to-buy { 
+    width: 400px;
+    margin-left: 90px;
+  }

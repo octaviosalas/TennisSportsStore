@@ -1,8 +1,8 @@
 .sizes-cont { 
+    position: relative;
+   
     display: inline-flex;
-    position: absolute;
-    left: 680px;
-    margin-top: 32px;
+  
 }
 
 .size-btn { 

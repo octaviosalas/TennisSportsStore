@@ -67,3 +67,13 @@
     overflow: hidden; /* Oculta el contenido excedente del botón */
     text-overflow: ellipsis; /* Agrega puntos suspensivos (...) al final del texto si se desborda */
   }
+
+  .finish-bbuy { 
+    background-color: black;
+    color: #ee644c
+  }
+
+  .finish-bbuy:hover { 
+     background-color: #ee644c;
+     color: black;
+  }

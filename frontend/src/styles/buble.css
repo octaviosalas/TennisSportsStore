@@ -1,0 +1,9 @@
+.buble-item { 
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    font-size: 12px;
+    position: absolute;
+    right: 7px;
+    bottom: 35px;
+}

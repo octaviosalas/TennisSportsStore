@@ -5,6 +5,7 @@ import "../styles/navbar.css"
 import { Link } from 'react-router-dom'
 import { UserContext } from '../store/user.context.js'
 import { useContext } from 'react'
+import BubleCart from '../components/BubleCart'
 
 const NavBar = () => {
    
@@ -28,7 +29,9 @@ const NavBar = () => {
                  <Link to={"/shoes"} className='link'><b><p className='my-pendt' title='Ver zapatillas'>Shoes</p></b></Link>
                  <Link to={"/tshirts"} className='link'> <b><p className='my-finish' title='Ver remeras'>T-Shirts</p></b> </Link>
             </div>
+            <BubleCart />
             <Link to={"/usercart"} className='link'> <img src={carrito} alt="" title="Ver mi carrito" className='img-logo' /></Link>
+           
           </div>
     </div>
   )

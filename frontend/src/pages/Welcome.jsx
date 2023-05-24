@@ -11,6 +11,7 @@ const Welcome = () => {
     const [name, setName] = useState("")
     const userCtx = useContext(UserContext)
     
+    
 
     
    useEffect(() => { 
@@ -33,7 +34,7 @@ const Welcome = () => {
           <NavBar />
       <div>
            <h4>Bienvenido {name}!</h4>
-           <p>Has creado con exito tu cuenta. Puedes comenzar a mirar nuestros productos y adquirir lo que quieras!</p>
+           <p>Has creado tu cuenta con exito. Puedes comenzar a mirar nuestros productos y adquirir lo que quieras!</p>
       </div>
 
 
