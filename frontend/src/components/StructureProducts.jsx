@@ -3,6 +3,8 @@ import "../styles/structureproducts.css"
 import { Link } from 'react-router-dom'
 
 const StructureProducts = ({prod}) => {
+
+  
   
   return (
     <div className='prod-cont-gral'> 
@@ -15,10 +17,12 @@ const StructureProducts = ({prod}) => {
                  </div>
                      <br />
                  <div className='conteiner-price'>
-                     <p className='price'>{p.price}ARS</p>
+                     <p className='price'>{p.price} ARS</p>
                  </div>
 
                  <div className='conteiner-detail-prod'>
+                  <button className='btn-agreg' title='agregar al carrito'>+</button>
+                  <br />
                     <Link to={`/viewDetail/${p.id}`} className='link'><a className='view-detail'>Ver producto en detalle</a></Link>
                  </div>
           </div>

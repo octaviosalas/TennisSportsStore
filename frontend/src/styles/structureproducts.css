@@ -68,3 +68,13 @@
   .view-detail:hover {
     text-decoration: underline;
   }
+
+  .btn-agreg { 
+   width: 50px;
+   margin-left: 50px;
+  }
+
+  .btn-agreg:hover { 
+    color: black;}
+
+    

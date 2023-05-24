@@ -72,9 +72,9 @@ const Login = ({}) => {
     
               <button type='button' onClick={() => tryToLogin()} >{load ? "Ingresando" : "Iniciar Sesion"} </button>
 
-              <p>
+              <p className='recupere'>
                 Has olvidado tu contraseña?{" "}
-               <Link to={"/login"}><b>Recuperar Contraseña</b></Link>
+               <Link to={"/login"} ><b>Recuperar Contraseña</b></Link>
               </p>
 
             </form> 

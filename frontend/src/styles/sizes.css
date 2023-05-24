@@ -1,0 +1,18 @@
+.sizes-cont { 
+    display: inline-flex;
+    position: absolute;
+    left: 680px;
+    margin-top: 32px;
+}
+
+.size-btn { 
+    background-color: white;
+    color:  #a95142;;
+    font-size: 13px;
+}
+
+.sizeshoes-btn{ 
+    background-color: white;
+    color:  #a95142;;
+    font-size: 13px;
+}

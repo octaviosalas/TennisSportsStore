@@ -32,7 +32,8 @@ const Welcome = () => {
     <div>
           <NavBar />
       <div>
-           <h4>Bienvenido! {name}</h4>
+           <h4>Bienvenido {name}!</h4>
+           <p>Has creado con exito tu cuenta. Puedes comenzar a mirar nuestros productos y adquirir lo que quieras!</p>
       </div>
 
 

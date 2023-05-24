@@ -9,6 +9,7 @@ import { UserProvider } from './store/user.context.js';
 import Shoes from "./pages/Shoes";
 import Tshirts from "./pages/Tshirts";
 import ViewDetailProduct from "./pages/ViewDetailProduct";
+import CartDetail from "./pages/CartDetail";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
                  <Route path="/shoes" element={<Shoes />}></Route>
                  <Route path="/tshirts" element={<Tshirts />}></Route>
                  <Route path="/viewDetail/:id" element={<ViewDetailProduct />}></Route>
+                 <Route path="/usercart" element={<CartDetail />}></Route>
               </Routes>
          
       </UserProvider>
