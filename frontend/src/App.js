@@ -11,7 +11,7 @@ import Shoes from "./pages/Shoes";
 import Tshirts from "./pages/Tshirts";
 import ViewDetailProduct from "./pages/ViewDetailProduct";
 import CartDetail from "./pages/CartDetail";
-import Finish from "./components/Finish";
+
 
 function App() {
   return (
@@ -30,7 +30,6 @@ function App() {
                  <Route path="/tshirts" element={<Tshirts />}></Route>
                  <Route path="/viewDetail/:id" element={<ViewDetailProduct />}></Route>
                  <Route path="/usercart" element={<CartDetail />}></Route>
-                 <Route path="/finish" element={<Finish />}></Route>
               </Routes>
 
 

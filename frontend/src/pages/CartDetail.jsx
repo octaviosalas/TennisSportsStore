@@ -4,6 +4,8 @@ import StructureCartDetail from '../components/StructureCartDetail'
 import { Link } from 'react-router-dom'
 import { UserContext } from '../store/user.context.js'
 import NavBar from './NavBar.jsx'
+import FinishBuy from '../components/FinishBuy.jsx'
+import ButtonConfirmate from '../components/ButtonConfirmate.jsx'
 
 const CartDetail = () => {
 
@@ -22,12 +24,16 @@ const CartDetail = () => {
     <div>
       <NavBar />
 
-       {cartCtx.products.length >= 1 ? cartCtx.products.map((p) => <StructureCartDetail productsToBuy={p}/>) 
+       {cartCtx.products.map((p) => <StructureCartDetail productsToBuy={p}/>)}
+       {cartCtx.products.length !== 0 ? <ButtonConfirmate />
        :
         <>
-         <p>No hay productos en el carrito</p>
+        <div>
+        <p>No hay productos en el carrito</p>
          <br />
          <Link to={`/welcome/${id}`}><p>Volver al inicio</p></Link>
+        </div>
+      
         </>
        }
        

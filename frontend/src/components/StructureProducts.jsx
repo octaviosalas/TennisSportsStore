@@ -7,12 +7,12 @@ import CartContext from '../store/cart.context.js'
 
 const StructureProducts = ({prod}) => {
 
-  const carritoCtx = useContext(CartContext)
+  /*const carritoCtx = useContext(CartContext)
 
       
-   const addToCartUser = (quantity) => { 
-     carritoCtx.addProduct({quantity: quantity, ...prod}) //al producto que recibe mi carrito, le agrego su cantidad
-   }
+   const addToCartUser = () => { 
+     carritoCtx.addProduct({quantity: 1, ...prod}) //al producto que recibe mi carrito, le agrego su cantidad
+   } */
 
   
   return (
@@ -30,7 +30,7 @@ const StructureProducts = ({prod}) => {
                  </div>
 
                  <div className='conteiner-detail-prod'>
-                  <button className='btn-agreg' title='agregar al carrito' onClick={() => addToCartUser()}>+</button>
+                  <button className='btn-agreg' title='agregar al carrito'>+</button>
                   <br />
                     <Link to={`/viewDetail/${p.id}`} className='link'><a className='view-detail'>Ver producto en detalle</a></Link>
                  </div>
