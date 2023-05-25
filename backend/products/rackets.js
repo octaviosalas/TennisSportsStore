@@ -78,7 +78,40 @@ const rackets =  [
         "category": "rackets",
         "brand": "head",
         "img": "https://d3ugyf2ht6aenh.cloudfront.net/stores/002/050/152/products/233532_boom-team-l_11-c5e6e34a348c9502b016747517469855-480-0.webp"
+    },
+    { 
+        "id": 31,
+        "name": "HEAD GRAPHANE 340",
+        "price": 146000,
+        "category": "rackets",
+        "brand": "head",
+        "img": "https://http2.mlstatic.com/D_NQ_NP_746285-MLA50751899616_072022-O.webp"
+    },
+    { 
+        "id": 32,
+        "name": "HEAD TI REWEARD",
+        "price": 116000,
+        "category": "rackets",
+        "brand": "head",
+        "img": "https://www.opensports.com.ar/media/catalog/product/cache/4769e4d9f3516e60f2b4303f8e5014a8/0/6/06-3-7138_0.jpg"
+    },
+    { 
+        "id": 33,
+        "name": "HEAD WOLVER 540",
+        "price": 116000,
+        "category": "rackets",
+        "brand": "head",
+        "img": "https://www.xtremsportshop.com/FilesRepo/2/O/8/1/iGZWSNwpzg-presentation-235370graphene-360-extreme-team-grey-yellow-1.jpg"
+    },
+    { 
+        "id": 34,
+        "name": "HEAD RAPHALINE",
+        "price": 116000,
+        "category": "rackets",
+        "brand": "head",
+        "img": "https://www.tennis-point.es/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dw58f78c55/images/006/062/04252000_000.jpg?q=80&sw=260"
     }
+    
 ]
 
 export default rackets;

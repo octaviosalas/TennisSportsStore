@@ -1,0 +1,15 @@
+import React from 'react'
+import "../styles/navbar.css"
+import { Link } from 'react-router-dom'
+
+const SectionsForUsers = () => {
+  return (
+    <div className='cont-sections-users' > 
+          <button className='bt-sections'>Ver mis compras</button>
+          <button className='bt-sections'>Ver mis favoritos</button>
+         <Link to={"/"}><button className='bt-sections'>Cerrar Sesion</button></Link>
+    </div>
+  )
+}
+
+export default SectionsForUsers

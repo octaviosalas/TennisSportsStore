@@ -78,6 +78,35 @@ const shoes =  [
         "category": "shoes",
         "brand": "lacoste",
         "img": "https://woker.vtexassets.com/arquivos/ids/349737-1200-1200?v=638180147278030000&width=1200&height=1200&aspect=true"
+    },
+    { 
+        "id": 35,
+        "name": "Adidas Titam Brem",
+        "price": 51000,
+        "category": "shoes",
+        "brand": "adidas",
+        "img": "https://media.solodeportes.com.ar/media/catalog/product/cache/7c4f9b393f0b8cb75f2b74fe5e9e52aa/z/a/zapatillas-de-tenis-adidas-courtflash-mujer-negra-100010gw6263001-1.jpg"
+    }, { 
+        "id": 36,
+        "name": "Head Prototype",
+        "price": 38000,
+        "category": "shoes",
+        "brand": "head",
+        "img": "https://cdn.businessinsider.es/sites/navi.axelspringer.es/public/media/image/2022/07/zapatillas-tenis-head-revolt-court-2749261.jpg?tf=3840x"
+    }, { 
+        "id": 37,
+        "name": "Head Max Down",
+        "price": 41000,
+        "category": "shoes",
+        "brand": "lacoste",
+        "img": "https://sparta.cl/media/catalog/product/z/a/zapatillas-tenis-ni-o-head-sprint-velcro-3-0-azul-lateral-derecha.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=300&width=300&canvas=300:300"
+    }, { 
+        "id": 38,
+        "name": "Yonex Bald",
+        "price": 11000,
+        "category": "shoes",
+        "brand": "yonex",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQn0saD3-yYekaI7U8NZBvSgM2tlBlXWyxpujwjHjJjxcbVpudJG08_0P3YKSvAEhpH6c4&usqp=CAU"
     }
 ]
 

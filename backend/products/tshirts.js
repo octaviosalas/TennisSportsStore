@@ -78,6 +78,37 @@ const tshirts =  [
         "category": "tshirts",
         "brand": "adidas",
         "img": "https://media.solodeportes.com.ar/media/catalog/product/cache/7c4f9b393f0b8cb75f2b74fe5e9e52aa/r/e/remera-de-tenis-adidas-club-graphic-blanca-100020hm6529001-1.jpg"
+    },
+    { 
+        "id": 39,
+        "name": "Nike Evolution",
+        "price": 18000,
+        "category": "tshirts",
+        "brand": "nike",
+        "img": "https://www.dexter.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dw5cb21307/products/NI_AA6267-301/NI_AA6267-301-1.JPG"
+    },
+    { 
+        "id": 40,
+        "name": "Head BranLine",
+        "price": 16000,
+        "category": "tshirts",
+        "brand": "head",
+        "img": "https://http2.mlstatic.com/D_NQ_NP_940329-MLA49315017329_032022-O.webp"
+    },
+    { 
+        "id": 41,
+        "name": "Nike Classic",
+        "price": 21000,
+        "category": "tshirts",
+        "brand": "nike",
+        "img": "https://http2.mlstatic.com/D_NQ_NP_946544-MLA27090273991_032018-O.jpg"
+    },{ 
+        "id": 42,
+        "name": "Nike Violete Red",
+        "price": 19000,
+        "category": "tshirts",
+        "brand": "nike",
+        "img": "https://http2.mlstatic.com/D_NQ_NP_859273-MLA40256625439_122019-O.jpg"
     }
 ]
 

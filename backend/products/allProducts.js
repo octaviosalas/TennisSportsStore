@@ -238,6 +238,99 @@ export const allProducts = [
         "category": "tshirts",
         "brand": "adidas",
         "img": "https://media.solodeportes.com.ar/media/catalog/product/cache/7c4f9b393f0b8cb75f2b74fe5e9e52aa/r/e/remera-de-tenis-adidas-club-graphic-blanca-100020hm6529001-1.jpg"
+    },
+    { 
+        "id": 31,
+        "name": "HEAD GRAPHANE 340",
+        "price": 146000,
+        "category": "rackets",
+        "brand": "head",
+        "img": "https://http2.mlstatic.com/D_NQ_NP_746285-MLA50751899616_072022-O.webp"
+    },
+    { 
+        "id": 32,
+        "name": "HEAD TI REWEARD",
+        "price": 116000,
+        "category": "rackets",
+        "brand": "head",
+        "img": "https://www.opensports.com.ar/media/catalog/product/cache/4769e4d9f3516e60f2b4303f8e5014a8/0/6/06-3-7138_0.jpg"
+    },
+    { 
+        "id": 33,
+        "name": "HEAD WOLVER 540",
+        "price": 116000,
+        "category": "rackets",
+        "brand": "head",
+        "img": "https://www.xtremsportshop.com/FilesRepo/2/O/8/1/iGZWSNwpzg-presentation-235370graphene-360-extreme-team-grey-yellow-1.jpg"
+    },
+    { 
+        "id": 34,
+        "name": "HEAD RAPHALINE",
+        "price": 116000,
+        "category": "rackets",
+        "brand": "head",
+        "img": "https://www.tennis-point.es/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dw58f78c55/images/006/062/04252000_000.jpg?q=80&sw=260"
+    },
+    { 
+        "id": 35,
+        "name": "Adidas Titam Brem",
+        "price": 51000,
+        "category": "shoes",
+        "brand": "adidas",
+        "img": "https://media.solodeportes.com.ar/media/catalog/product/cache/7c4f9b393f0b8cb75f2b74fe5e9e52aa/z/a/zapatillas-de-tenis-adidas-courtflash-mujer-negra-100010gw6263001-1.jpg"
+    }, { 
+        "id": 36,
+        "name": "Head Prototype",
+        "price": 38000,
+        "category": "shoes",
+        "brand": "head",
+        "img": "https://cdn.businessinsider.es/sites/navi.axelspringer.es/public/media/image/2022/07/zapatillas-tenis-head-revolt-court-2749261.jpg?tf=3840x"
+    }, { 
+        "id": 37,
+        "name": "Head Max Down",
+        "price": 41000,
+        "category": "shoes",
+        "brand": "lacoste",
+        "img": "https://sparta.cl/media/catalog/product/z/a/zapatillas-tenis-ni-o-head-sprint-velcro-3-0-azul-lateral-derecha.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=300&width=300&canvas=300:300"
+    }, { 
+        "id": 38,
+        "name": "Yonex Bald",
+        "price": 11000,
+        "category": "shoes",
+        "brand": "yonex",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQn0saD3-yYekaI7U8NZBvSgM2tlBlXWyxpujwjHjJjxcbVpudJG08_0P3YKSvAEhpH6c4&usqp=CAU"
+    },
+    { 
+        "id": 39,
+        "name": "Nike Evolution",
+        "price": 18000,
+        "category": "tshirts",
+        "brand": "nike",
+        "img": "https://www.dexter.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dw5cb21307/products/NI_AA6267-301/NI_AA6267-301-1.JPG"
+    },
+    { 
+        "id": 40,
+        "name": "Head BranLine",
+        "price": 16000,
+        "category": "tshirts",
+        "brand": "head",
+        "img": "https://http2.mlstatic.com/D_NQ_NP_940329-MLA49315017329_032022-O.webp"
+    },
+    { 
+        "id": 41,
+        "name": "Nike Classic",
+        "price": 21000,
+        "category": "tshirts",
+        "brand": "nike",
+        "img": "https://http2.mlstatic.com/D_NQ_NP_946544-MLA27090273991_032018-O.jpg"
+    },
+    { 
+        "id": 42,
+        "name": "Nike Violete Red",
+        "price": 19000,
+        "category": "tshirts",
+        "brand": "nike",
+        "img": "https://http2.mlstatic.com/D_NQ_NP_859273-MLA40256625439_122019-O.jpg"
     }
 ]
 

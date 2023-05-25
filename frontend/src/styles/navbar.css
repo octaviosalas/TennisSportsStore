@@ -54,4 +54,32 @@
   .name-sesion { 
     position: absolute;
     right: 100px;
+    cursor: pointer;
+    text-decoration: underline;
   }
+
+
+  .section-div { 
+    width: 180px;
+    height: 110px;
+    display: none;
+    position: absolute;
+    right: 37px;
+    top: 53px;
+  }
+
+  .bt-sections { 
+    width: 170px;
+    font-size: 10px;
+  }
+
+  .bt-sections:hover { 
+    width: 210px;
+    color: black;
+    font-size: 11px;
+  }
+
+  .cont-sections-users { 
+
+  }
+  

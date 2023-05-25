@@ -7,6 +7,7 @@ import { Link, useParams } from 'react-router-dom'
 import { UserContext } from '../store/user.context.js'
 import { useContext } from 'react'
 import BubleCart from '../components/BubleCart'
+import SectionsForUsers from '../components/SectionsForUsers'
 
 const NavBar = () => {
 
@@ -31,6 +32,19 @@ const NavBar = () => {
 
   console.log(userId)
 
+  const showSections = () => { 
+     const div = document.querySelector(".section-div")
+     div.style.display = "block"
+     setTimeout(() => { 
+      div.style.display = "none"
+     }, 4000)
+  }
+
+  const dontShowSections = () => { 
+    const div = document.querySelector(".section-div")
+    div.style.display = "none"
+ }
+
 
   return (
     <div className='conteiner-gral-nav'>
@@ -40,7 +54,10 @@ const NavBar = () => {
                 <Link to={"/rackets"} className='link'> <b><p className='my-tasks' title='ver raquetas'  >Rackets</p></b> </Link>
                  <Link to={"/shoes"} className='link'><b><p className='my-pendt' title='Ver zapatillas'>Shoes</p></b></Link>
                  <Link to={"/tshirts"} className='link'> <b><p className='my-finish' title='Ver remeras'>T-Shirts</p></b> </Link>
-                 <p className='name-sesion'>{name}</p>
+                 <p className='name-sesion' onMouseOver={() => showSections()} >{name}</p>
+                 <div className='section-div'>
+                     <SectionsForUsers />
+                 </div>
             </div>
             <BubleCart />
             <Link to={"/usercart"} className='link'> <img src={carrito} alt="" title="Ver mi carrito" className='img-logo' /></Link>
