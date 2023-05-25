@@ -1,8 +1,8 @@
 import React from 'react'
 import axios from "axios"
 import { useState, useEffect } from 'react'
-import StructureProducts from '../components/StructureProducts'
 import NavBar from './NavBar'
+import MapingProducts from '../components/MapingProducts'
 
 
 
@@ -37,7 +37,7 @@ const Shoes = () => {
         </div>
 
         <div>
-            <StructureProducts prod={shoes}/>
+            <MapingProducts prod={shoes}/>
         </div>
       
     </div>

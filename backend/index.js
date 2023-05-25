@@ -5,6 +5,7 @@ import connectDataBase from "./database/dbconnect.js"
 //import tasksRoutes from "./routes/tasks.routes.js"
 import usersRoutes from "./routes/users.routes.js"
 import productsRoutes from "./routes/products.routes.js"
+import buyRoutes from "./routes/buy.routes.js"
 
 const app = express()
 const port = 4000
@@ -18,6 +19,7 @@ app.use(express.urlencoded({extended:true}))
 
 app.use(usersRoutes)
 app.use(productsRoutes)
+app.use(buyRoutes)
 
 
 

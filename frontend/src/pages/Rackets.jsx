@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import axios from "axios"
 import "../components/StructureProducts"
-import StructureProducts from '../components/StructureProducts'
 import NavBar from './NavBar'
+import MapingProducts from '../components/MapingProducts'
 
 
 
@@ -39,7 +39,7 @@ const Rackets = () => {
         </div>
 
         <div>
-            <StructureProducts prod={rackets}/>
+            <MapingProducts prod={rackets}/>
         </div>
            
     </div>

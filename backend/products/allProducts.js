@@ -85,7 +85,7 @@ export const allProducts = [
         "price": 37000,
         "category": "shoes",
         "brand": "lacoste",
-        "img": "https://imagesa1.lacoste.com/dw/image/v2/BCWL_PRD/on/demandware.static/-/Sites-master/default/dw2547afd7/43SMA0011_080_01.jpg?imwidth=915&impolicy=product"
+        "img": "https://ferreira.vtexassets.com/arquivos/ids/388559/lac_741sfa010465t.jpg?v=637764615905930000"
     }, 
     { 
         "id": 12,

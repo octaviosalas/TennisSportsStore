@@ -10,9 +10,9 @@ const StructureCartDetail = ({productsToBuy}) => {
 
   return (
 
-    <>
     
-    <div>
+    
+ 
       <div className='title-conteiner'>
               <table className='tabla'>
                   <tr className='tr-item'>
@@ -34,9 +34,9 @@ const StructureCartDetail = ({productsToBuy}) => {
                   </tr>
               </table>
     </div>
-    </div>
+  
 
-    </>
+    
     
   )
 }

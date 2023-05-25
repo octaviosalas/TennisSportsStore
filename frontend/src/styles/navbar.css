@@ -50,3 +50,8 @@
   .img-logo:hover {
     transform: scale(1.1);
   }
+
+  .name-sesion { 
+    position: absolute;
+    right: 100px;
+  }
