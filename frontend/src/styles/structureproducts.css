@@ -1,4 +1,4 @@
-.prod-cont-gral {
+prod-cont-gral {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
@@ -82,4 +82,19 @@
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
+  } 
+
+  .cont-sec { 
+    display: inline-flex;
   }
+
+  .fav-img { 
+    margin-left: 60px;
+    cursor: pointer;
+    border-radius: 100%;
+    width: 30px;
+    height: 20px;
+  }
+
+
+  

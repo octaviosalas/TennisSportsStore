@@ -6,7 +6,7 @@ const SectionsForUsers = () => {
   return (
     <div className='cont-sections-users' > 
           <button className='bt-sections'>Ver mis compras</button>
-          <button className='bt-sections'>Ver mis favoritos</button>
+          <Link to={"/favourites"}><button className='bt-sections'>Ver mis favoritos</button></Link>
          <Link to={"/"}><button className='bt-sections'>Cerrar Sesion</button></Link>
     </div>
   )

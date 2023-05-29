@@ -30,14 +30,14 @@ const NavBar = () => {
         
  }, [])
 
-  console.log(userId)
+
 
   const showSections = () => { 
      const div = document.querySelector(".section-div")
      div.style.display = "block"
-     setTimeout(() => { 
+    setTimeout(() => { 
       div.style.display = "none"
-     }, 4000)
+     }, 5000)
   }
 
   const dontShowSections = () => { 
@@ -48,15 +48,15 @@ const NavBar = () => {
 
   return (
     <div className='conteiner-gral-nav'>
-          <div className='conteiner-nav'>
-             <div className='cont-pb'>
+          <div className='conteiner-nav' >
+             <div className='cont-pb'  >
                 <Link to={`/welcome/${userId}`} className='link'> <b><p className='my-tasks' id='inicio' title='Inicio'>Inicio</p></b></Link>
                 <Link to={"/rackets"} className='link'> <b><p className='my-tasks' title='ver raquetas'  >Rackets</p></b> </Link>
                  <Link to={"/shoes"} className='link'><b><p className='my-pendt' title='Ver zapatillas'>Shoes</p></b></Link>
                  <Link to={"/tshirts"} className='link'> <b><p className='my-finish' title='Ver remeras'>T-Shirts</p></b> </Link>
-                 <p className='name-sesion' onMouseOver={() => showSections()} >{name}</p>
+                 <p className='name-sesion' onMouseOver={() => showSections()}>{name}</p>
                  <div className='section-div'>
-                     <SectionsForUsers />
+                     <SectionsForUsers/>
                  </div>
             </div>
             <BubleCart />

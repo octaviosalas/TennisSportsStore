@@ -12,8 +12,6 @@ const Welcome = () => {
     const userCtx = useContext(UserContext)
     
     
-
-    
    useEffect(() => { 
       axios.get(`http://localhost:4000/user/${id}`)   
            .then(({data}) =>{ 
