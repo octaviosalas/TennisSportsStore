@@ -1,17 +1,17 @@
 import Buys from "../models/buys.js"
 
-export const saveBuy = async  (req, res) => { 
+
+export const saveBuy =  async  (req, res) => { 
 
   const productos = req.body;
   const {userid} = req.params
   console.log(req.params)
 
   try {
-
- 
-   const mapProducts = productos.map((productos) => { 
+    
+   const mapProducts = await productos.map((productos) => { 
     const { quantity, category, name, price } = productos;
-    const compranueva = new Buys( { 
+    const compranueva =  new Buys( { 
         quantity,
         category,
         name,

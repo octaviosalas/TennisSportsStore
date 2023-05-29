@@ -24,7 +24,10 @@ const Favourites = () => {
         axios.get(`http://localhost:4000/favouritesProducts/${userId}` )
         .then((res) => { 
            const docs = res.data
-           setFavs(docs);
+           setTimeout(() => { 
+            setFavs(docs)
+           }, 1500)
+           
            console.log(favs)
         })
         .catch(err => console.log(err))
