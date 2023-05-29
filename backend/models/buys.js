@@ -9,7 +9,7 @@ const buysSchema = mongoose.Schema( {
         type: String,
     }, 
     price: { 
-        type: String,
+        type: Number,
        
     },
     category: { 

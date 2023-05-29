@@ -25,6 +25,7 @@ const CartDetail = () => {
 
   const saveBuyInDb = () => { 
     const docs = cartCtx.products;
+    console.log(docs)
 
       axios.post(`http://localhost:4000/buy/${id}`, docs, {
         headers: {

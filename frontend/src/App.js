@@ -12,6 +12,7 @@ import Tshirts from "./pages/Tshirts";
 import ViewDetailProduct from "./pages/ViewDetailProduct";
 import CartDetail from "./pages/CartDetail";
 import Favourites from "./pages/Favourites";
+import MyBuys from "./pages/MyBuys";
 
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
                  <Route path="/viewDetail/:id" element={<ViewDetailProduct />}></Route>
                  <Route path="/usercart" element={<CartDetail />}></Route>
                  <Route path="/favourites" element={<Favourites />}></Route>
+                 <Route path="/myBuys" element={<MyBuys />}></Route>
               </Routes>
 
 

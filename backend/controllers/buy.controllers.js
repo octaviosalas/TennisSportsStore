@@ -10,11 +10,12 @@ export const saveBuy = async  (req, res) => {
 
  
    const mapProducts = productos.map((productos) => { 
-    const { quantity, category, name } = productos;
+    const { quantity, category, name, price } = productos;
     const compranueva = new Buys( { 
         quantity,
         category,
         name,
+        price,
         userid: userid
     })
        return compranueva.save()
@@ -31,25 +32,15 @@ export const saveBuy = async  (req, res) => {
 }
 
 
-
- /*   const {quantity, name, price, category} = req.body
-
-    console.log(req.body)
-
+export const getBuysOfUser = async (req, res) => { 
+    const {userid} = req.params
 
     try {
-        const newBuy = new Buys( {                                   
-            quantity: quantity,
-            name: name,
-            price: price,
-            category: category
-        })
-        newBuy.save().then((b) => {                                 
-            res.json({Mensaje: "Compra Almacenada", b})               
-        })
-
+       const userBuys = await Buys.find({userid: userid})
+       console.log(userBuys)
+       res.json(userBuys)
     } catch (err) {
         console.log(err)
-    }*/
+    }
 
-
+}
