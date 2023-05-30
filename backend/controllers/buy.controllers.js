@@ -38,7 +38,7 @@ export const getBuysOfUser = async (req, res) => {
 
     try {
        const userBuys = await Buys.find({userid: userid})
-       console.log(userBuys)
+       
        res.json(userBuys)
     } catch (err) {
         console.log(err)

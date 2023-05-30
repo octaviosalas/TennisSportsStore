@@ -43,7 +43,7 @@ const CartDetail = () => {
   
   
   return (
-    <div>
+    <div className='gral-cart-detail'>
       
       <NavBar />
    
