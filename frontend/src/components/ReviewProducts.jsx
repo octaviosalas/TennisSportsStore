@@ -3,7 +3,7 @@ import "../styles/review.css"
 import { useEffect, useState } from 'react'
 import { UserContext } from '../store/user.context.js'
 import axios from 'axios'
-import NavBar from '../pages/NavBar'
+
 
 
 
@@ -54,9 +54,7 @@ const ReviewProducts = () => {
 
         <>
 
-        <div>
-            <NavBar/>
-        </div>
+       
          <div className="container-review">
       <h2>Send your review</h2>
         <form className='form-review'>
@@ -70,7 +68,7 @@ const ReviewProducts = () => {
         <label htmlFor="comment" className='label-review'>Opinión:</label>
         <textarea id="comment" placeholder="Escriba su opinión aquí" required value={review} onChange={(e) => setReview(e.target.value)}></textarea>
         
-        <button type="submit" onClick={() => sendOpinion()}>Send Review</button>
+        <button type="submit"  onClick={() => sendOpinion()}>Send Review</button>
       </form>
     </div>
         

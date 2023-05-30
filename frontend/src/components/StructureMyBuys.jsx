@@ -4,18 +4,30 @@ import { Link } from 'react-router-dom';
 import { useContext } from 'react'
 import { UserContext } from '../store/user.context.js'
 import { useState, useEffect } from 'react';
+import ReviewProducts from './ReviewProducts';
+import "../styles/mybuys.css"
 
 
 const StructureMyBuys = ({ buys }) => {
 
   const userCtx = useContext(UserContext);
   const [userId, setUserId] = useState(userCtx.userId);
+  const [showReview, setShowReview] = useState(false);
 
   
   useEffect(() => {
     setUserId(userCtx.userId);
     console.log(userCtx.userId)
   }, [userCtx.userId])
+
+  const showReviewComponent = () => {
+    setShowReview(true);
+  };
+
+  const dontShowReviewComponent = () => {
+    setShowReview(false);
+  };
+
 
   return (
     <div className='container-buy'>
@@ -27,8 +39,16 @@ const StructureMyBuys = ({ buys }) => {
       <p className='quantity'>You Bought {buys.quantity} items</p>
 
       <div>
-         <Link to={`/review/${userId}`}  className='lnk'><a className='opinion' title='leave an opinion'>Review this product</a></Link> 
+         <a className='opinion' title='leave an opinion' onClick={() => showReviewComponent()}>Review this product</a>
       </div>
+
+      <div className='review-component'>
+         {showReview && <ReviewProducts />}
+         {showReview ? <p style={{cursor: "pointer"}} onClick={() => dontShowReviewComponent()}>Cerrar</p> : null}
+      </div>
+
+      
+
     </div>
   );
 };
@@ -37,3 +57,4 @@ const StructureMyBuys = ({ buys }) => {
 export default StructureMyBuys;
 
 
+//<Link to={`/review/${userId}`}  className='lnk'><a className='opinion' title='leave an opinion'>Review this product</a></Link> 

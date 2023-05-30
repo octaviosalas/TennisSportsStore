@@ -28,7 +28,7 @@ const rackets =  [
     }, 
     { 
         "id": 4,
-        "name": "Head Graphene 360+ Instinct Mp Grafito",
+        "name": "Head Graphene 360+",
         "price": 98700,
         "category": "rackets",
         "brand": "head",

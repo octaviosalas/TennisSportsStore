@@ -4,10 +4,8 @@
         margin: 0 auto;
         height: 490px;
         padding: 20px;
-        background-color: #e2dede;
+  
         border-radius: 8px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-     
 }
   
   
@@ -43,3 +41,5 @@
   button:hover {
     background-color: #a95142;;
   }
+
+  

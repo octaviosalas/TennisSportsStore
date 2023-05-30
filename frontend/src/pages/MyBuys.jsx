@@ -52,7 +52,7 @@ const MyBuys = () => {
         {userBuys.map((b) => <StructureMyBuys buys={b}/>)}
 
         <div>
-            <Link to={`/welcome/${userId}`}><p title='ir al inicio'>Volver al Inicio</p></Link>
+            <Link to={`/welcome/${userId}`} className='lnk'><p title='ir al inicio'>Volver al Inicio</p></Link>
         </div>
     </div>
   )

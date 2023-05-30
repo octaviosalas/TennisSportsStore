@@ -28,7 +28,7 @@ export const allProducts = [
     }, 
     { 
         "id": 4,
-        "name": "Head Graphene 360+ Instinct Mp Grafito",
+        "name": "Head Graphene 360+ Mp Grafito",
         "price": 98700,
         "category": "rackets",
         "brand": "head",
