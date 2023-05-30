@@ -6,11 +6,9 @@ import connectDataBase from "./database/dbconnect.js"
 import usersRoutes from "./routes/users.routes.js"
 import productsRoutes from "./routes/products.routes.js"
 import buyRoutes from "./routes/buy.routes.js"
-import mercadopago from "mercadopago"
+import reviewsRoutes from "./routes/reviews.routes.js"
 
-mercadopago.configure({ 
-  access_token: "TEST-1883449430457760-052913-f2e2887fa5905c9bc2efbf66d85c8ba5-548557600"
-})
+
 
 const app = express()
 const port = 4000
@@ -25,6 +23,7 @@ app.use(express.urlencoded({extended:true}))
 app.use(usersRoutes)
 app.use(productsRoutes)
 app.use(buyRoutes)
+app.use(reviewsRoutes)
 
 
 

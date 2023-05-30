@@ -14,6 +14,7 @@ const MyBuys = () => {
    
     useEffect(() => {
         setUserId(userCtx.userId);
+        console.log(userCtx.userId)
       }, [userCtx.userId])
 
       function getBuysOfTheUser() { 
@@ -46,12 +47,12 @@ const MyBuys = () => {
             <NavBar/>
         </div>
         <div>
-            <h4>Estas son tus ultimas compras</h4>
+            <h4 style={{marginBottom: "1vh", textAlign: "center", fontWeight: "bold"}}>Estas son tus ultimas compras</h4>
         </div>
         {userBuys.map((b) => <StructureMyBuys buys={b}/>)}
 
         <div>
-            <Link to={`/welcome/${userId}`}><p>Volver al Inicio</p></Link>
+            <Link to={`/welcome/${userId}`}><p title='ir al inicio'>Volver al Inicio</p></Link>
         </div>
     </div>
   )

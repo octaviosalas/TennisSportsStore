@@ -18,6 +18,9 @@ const buysSchema = mongoose.Schema( {
     userid: { 
         type: String,
         required: true
+    },
+    id: { 
+        type: Number
     }
    
 

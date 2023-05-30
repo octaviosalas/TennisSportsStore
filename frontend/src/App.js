@@ -13,11 +13,12 @@ import ViewDetailProduct from "./pages/ViewDetailProduct";
 import CartDetail from "./pages/CartDetail";
 import Favourites from "./pages/Favourites";
 import MyBuys from "./pages/MyBuys";
+import ReviewProducts from "./components/ReviewProducts";
 
 
 function App() {
   return (
-    <div className="container">
+    <div className="app">
 
      <UserProvider>
       <CartProvider>
@@ -33,7 +34,8 @@ function App() {
                  <Route path="/viewDetail/:id" element={<ViewDetailProduct />}></Route>
                  <Route path="/usercart" element={<CartDetail />}></Route>
                  <Route path="/favourites" element={<Favourites />}></Route>
-                 <Route path="/myBuys" element={<MyBuys />}></Route>
+                 <Route path="/myBuys/:userId" element={<MyBuys />}></Route>
+                 <Route path="/review/:userId" element={<ReviewProducts />}></Route>
               </Routes>
 
 

@@ -1,30 +1,39 @@
 import React from 'react'
 import "../styles/mybuys.css"
+import { Link } from 'react-router-dom';
+import { useContext } from 'react'
+import { UserContext } from '../store/user.context.js'
+import { useState, useEffect } from 'react';
 
-const StructureMyBuys = ({buys}) => {
+
+const StructureMyBuys = ({ buys }) => {
+
+  const userCtx = useContext(UserContext);
+  const [userId, setUserId] = useState(userCtx.userId);
+
+  
+  useEffect(() => {
+    setUserId(userCtx.userId);
+    console.log(userCtx.userId)
+  }, [userCtx.userId])
+
   return (
-    <div>
-           <div className='a'>
-              <table className='b'>
-                  <tr className='c'>
+    <div className='container-buy'>
+      <div  className='title-container'>
+       <Link to={`/viewdetail/${buys.id}`} className='lnk'> <h3 className='title'><b>{buys.name}</b></h3> </Link>
+       <Link to={`/${buys.category}`} className='lnk'><b className='category'>{buys.category}</b></Link> 
+      </div>
+      <p  className='price'>You spent: {buys.price} ARS</p>
+      <p className='quantity'>You Bought {buys.quantity} items</p>
 
-                      <th className='seccion'>Product</th>
-                      <th className='seccion'>Price</th>
-                      <th className='seccion'>Quantity</th>
-                  </tr>
-      
-                  <tr className='tr-detail'>
-                     <td className='remera-dato'>{buys.name}</td>
-                     <td className='remera-dato'>{buys.price} ARS</td>
-                     <td className='remera-dato'>{buys.quantity}</td>
-                  </tr>
-              </table>
-
-              
+      <div>
+         <Link to={`/review/${userId}`}  className='lnk'><a className='opinion' title='leave an opinion'>Review this product</a></Link> 
+      </div>
     </div>
-                   
-    </div>
-  )
-}
+  );
+};
 
-export default StructureMyBuys
+
+export default StructureMyBuys;
+
+

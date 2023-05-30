@@ -8,8 +8,10 @@ import { UserContext } from '../store/user.context.js'
 const Welcome = () => {
 
     const {id} = useParams()
-    const [name, setName] = useState("")
     const userCtx = useContext(UserContext)
+    const [name, setName] = useState("")
+    const [userId, setUserId] = useState(id);
+  
     
     
    useEffect(() => { 
@@ -24,8 +26,9 @@ const Welcome = () => {
 
    
   useEffect(() => { 
+    setUserId(userCtx.userId);
     console.log(userCtx.userId)
-  }, [])
+  }, [userCtx.userId])
 
   return (
     <div>

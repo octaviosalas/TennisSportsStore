@@ -9,7 +9,7 @@ export const getUserById = async (req, res) => {
             if(!user) {                                                             //Si no lo encontras
                 return res.json({Mensaje: "El usuario no existe"})                 //decime que el usuario no existe
             } else {                                                              //y sino 
-                const {_id, password, __v, ...respuesta } = user._doc;           //el objeto user._doc son los datos del documento de mongodb. user._doc contiene TODO. Y aca, lo desestructuro en otro objeto llamado 
+                const {_password, ...respuesta } = user._doc;           //el objeto user._doc son los datos del documento de mongodb. user._doc contiene TODO. Y aca, lo desestructuro en otro objeto llamado 
                 res.json(respuesta)                                             //"respuesta" para que me devuelva como respuesta los datos del documento, pero obviamente SIN el id y sin la contraseña.
             }                                                                  //de esta manera, me devuelve solo "respuesta" que contiene el email y el nombre. Por eso lo desestructuro
         })

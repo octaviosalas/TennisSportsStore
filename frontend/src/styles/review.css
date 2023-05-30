@@ -1,0 +1,45 @@
+
+.container-review {
+        width: 400px;
+        margin: 0 auto;
+        height: 490px;
+        padding: 20px;
+        background-color: #e2dede;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+     
+}
+  
+  
+  h2 {
+    text-align: center;
+  }
+  
+  .form-review {
+    display: flex;
+   
+  }
+  
+ .label-review{
+    font-weight: bold;
+  }
+  
+  .input-review, textarea {
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  
+  button {
+    padding: 8px 16px;
+    background-color: #a95142;;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #a95142;;
+  }

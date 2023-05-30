@@ -187,7 +187,7 @@ export const allProducts = [
     }, 
     { 
         "id": 23,
-        "name": "Aero React Rafa Nadal",
+        "name": "Aero X4 Rafa Nadal",
         "price": 23200,
         "category": "tshirts",
         "brand": "nike",
