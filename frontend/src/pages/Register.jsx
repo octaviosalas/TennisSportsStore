@@ -84,8 +84,10 @@ const Register = () => {
 
               <p>
                 Ya tienes una cuenta?{" "}
-               <Link to={"/login"}> <b>Inicia Sesión!</b></Link>
+               <Link to={"/login"} className='lnk'> <b className='inicia'>Inicia Sesión!</b></Link>
               </p>
+
+    
 
                <b><p className='user-created'>{message}</p></b>
 

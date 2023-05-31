@@ -154,3 +154,12 @@ b:hover {
   color:  #ee644c;
   font-size: 12px;
 }
+
+.inicia { 
+  text-decoration: underline;
+}
+
+.invitate-user { 
+  text-decoration: underline;
+  cursor: pointer;
+}

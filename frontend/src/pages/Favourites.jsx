@@ -6,11 +6,13 @@ import "../styles/fav.css"
 import NavBar from './NavBar'
 import { UserContext } from '../store/user.context.js'
 import { useContext } from 'react'
+import { Link } from 'react-router-dom'
 
 const Favourites = () => {
 
     const [favs, setFavs] = useState([])
     const [name, setName] = useState("")
+    const [msj, setMsj] = useState(false)
 
     const userCtx = useContext(UserContext);
     const [userId, setUserId] = useState(userCtx.userId);
@@ -25,7 +27,12 @@ const Favourites = () => {
         .then((res) => { 
            const docs = res.data
            setTimeout(() => { 
-            setFavs(docs)
+            if(docs.length !== 0) { 
+              setFavs(docs)
+            } else { 
+              setMsj(true)
+            }
+            
            }, 1500)
            
            console.log(favs)
@@ -54,7 +61,13 @@ const Favourites = () => {
     </div>
 
     <div className='conteiner-title-fav'>
-        <h4 className='title-fav'> {name}, estos son tus Favoritos!</h4>
+        {msj ? <> 
+        <p> You have not yet saved products in the favorites section </p>    
+       <Link to={`/rackets`} ><p title='Go Buy'>Go Shopping</p></Link> </> 
+
+           :
+           
+          <h4 className='title-fav'> {name}, these are your Favorites!</h4>}
     </div>
         <div className='cont-prod-fav'>
           <MapingFavProducts pro={favs}/>

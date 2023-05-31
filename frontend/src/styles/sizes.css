@@ -16,3 +16,13 @@
     color:  #a95142;;
     font-size: 13px;
 }
+
+.sizeshoes-btn:hover { 
+    background-color:  #a95142;
+    color: black;
+}
+
+.size-btn:hover { 
+    background-color:  #a95142;
+    color: black;
+}

@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 
 const reviewsSchema = mongoose.Schema( { 
-    username: { 
+    name: { 
         type: String,
     }, 
    userId: { 

@@ -5,6 +5,7 @@ export const saveReview = async (req, res) => {
        
         try {
           const {userId, name, punctuation, review, productId} = req.body
+          console.log(req.body)
           const newOpinion = new Reviews ( { 
                 userId: userId,
                 name: name,

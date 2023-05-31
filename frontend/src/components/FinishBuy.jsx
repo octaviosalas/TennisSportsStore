@@ -5,9 +5,12 @@ import { Link } from 'react-router-dom'
 
 
 const FinishBuy = () => {
+
+
+
   return (
     <div>
-        <Link to={"/usercart"}> <button className='finish-bbbuy'>Checkout</button> </Link>
+        <Link to={"/usercart"}> <button className='finish-bbbuy' >Checkout</button> </Link>
     </div>
   )
 }

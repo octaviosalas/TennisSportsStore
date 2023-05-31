@@ -11,6 +11,7 @@ const MyBuys = () => {
     const userCtx = useContext(UserContext);
     const [userId, setUserId] = useState(userCtx.userId);
     const [userBuys, setUserBuys] = useState([])
+    const [msj, setMsj] = useState(false)
    
     useEffect(() => {
         setUserId(userCtx.userId);
@@ -21,8 +22,12 @@ const MyBuys = () => {
        return axios.get(`http://localhost:4000/getBuys/${userId}`)
                    .then((res) =>  { 
                     const purchases = res.data
-                    console.log(purchases)
-                    return purchases
+                    if(purchases.length !== 0) { 
+                        console.log(purchases)
+                        return purchases
+                    } else { 
+                        setMsj(true)
+                    }
                    })
                    .catch(err => console.log(err))
 
@@ -42,18 +47,30 @@ const MyBuys = () => {
 
   return (
     <div>
-
-        <div>
             <NavBar/>
-        </div>
         <div>
-            <h4 style={{marginBottom: "1vh", textAlign: "center", fontWeight: "bold"}}>These are your last purchases</h4>
-        </div>
-        {userBuys.map((b) => <StructureMyBuys buys={b}/>)}
 
-        <div>
-            <Link to={`/welcome/${userId}`} className='lnk'><p title='ir al inicio'>Back home</p></Link>
+            {msj ? <>
+               <p className='didnt-buy' style={{color:"black"}}>You have not made in-app purchases yet. You can go shopping 😉</p> 
+               <Link to={`/rackets`} ><p title='Go Buy'>Go Shopping</p></Link>
+                   </>
+            
+
+            : 
+            <>
+            <h4 style={{marginBottom: "1vh", textAlign: "center", fontWeight: "bold"}}>These are your last purchases</h4>
+            {userBuys.map((b) => <StructureMyBuys buys={b}/>)}
+
+            <div>
+                  <Link to={`/welcome/${userId}`} className='lnk'><p title='ir al inicio'>Back home</p></Link>
+            </div>
+            
+            </>  }
+          
         </div>
+    
+
+       
     </div>
   )
 }

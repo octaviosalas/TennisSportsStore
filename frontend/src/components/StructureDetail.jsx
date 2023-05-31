@@ -8,12 +8,15 @@ import { useContext, useEffect } from 'react'
 import CartContext from '../store/cart.context.js'
 import { Link } from 'react-router-dom'
 import axios from "axios"
+import ProductsOpinions from '../pages/ProductsOpinions'
 
 const StructureDetail = ({product}) => {
      
     const carritoCtx = useContext(CartContext)
 
     const [dataOpinions, setDataOpinions] = useState([])
+    const [showOpinions, setShowOpinions] = useState(false)
+    const [msjNothing, setMsjNothing] = useState(false)
 
       
    const addToCartUser = (quantity) => { 
@@ -29,12 +32,31 @@ const StructureDetail = ({product}) => {
        axios.get(`http://localhost:4000/getReviews/${product.id}`)
             .then((res) => {
                console.log(res.data)
-               setDataOpinions(res.data)
-               console.log(dataOpinions)
+                  if(res.data.length !== 0) { 
+                    setDataOpinions(res.data)
+                    console.log(dataOpinions)
+                    setShowOpinions(true)
+                  } else { 
+                    console.log("No hay reseñas")
+                    setMsjNothing(true)
+                  }
+                    
+                               
             }) 
             .catch((err) => console.log(err))
     }
 
+    useEffect(() => {
+     console.log(dataOpinions)
+  }, [dataOpinions]);
+
+  const closeOpinions = () => { 
+     setShowOpinions(false)
+  }
+  
+  const closeMsj = () => { 
+     setMsjNothing(false)
+  }
 
 
   return (
@@ -57,7 +79,7 @@ const StructureDetail = ({product}) => {
                </div>
 
                <div>
-                   <p className='know-ops' title='Click to know opinions' onClick={() => getProductOpinions(product.id)}>Know Opinions of this product</p>
+               <p className='know-ops' title='Click to know opinions' onClick={() => getProductOpinions(product.id)}>Know Opinions of this product</p>
                </div>
          </div>
 
@@ -66,8 +88,29 @@ const StructureDetail = ({product}) => {
             
          </div>
 
+         <div>
+              {showOpinions &&  <ProductsOpinions reviews={dataOpinions}/> } 
+
+              {showOpinions ?  <button className='btn-close-ops' onClick={() => closeOpinions()}>Close Opinions</button> : null}
+
+              {msjNothing &&  
+
+               <div className='div-msj-nothing'>
+                     <p>There are no reviews for this product so far.</p> 
+                     <button className='btn-x' onClick={() => closeMsj()}>X</button>
+               </div>
+
+               } 
+     
+          
+              
+           
+              
+         </div>
+
     </div>
   )
 }
 
 export default StructureDetail
+

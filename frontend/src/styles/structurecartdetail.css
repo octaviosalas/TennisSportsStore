@@ -59,7 +59,7 @@
   
   .name-product,
   .price-prod {
-    background-color: #ee644c;
+    background-color: #32302f;
     color: white;
     padding: 5px 10px;
     border-radius: 8px;
@@ -102,4 +102,19 @@
     margin-bottom: 30px;
   }
 
- 
+ .btn-close-ops { 
+  width: 300px;
+  margin-left: 220px;
+ }
+
+
+ .div-msj-nothing { 
+  margin-top: 180px;
+ }
+
+ .btn-x { 
+  width: 40px;
+  height: 30px;
+  font-size: 12px;
+  margin-left: 170px;
+ }
