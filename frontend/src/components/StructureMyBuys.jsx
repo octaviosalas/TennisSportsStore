@@ -43,8 +43,8 @@ const StructureMyBuys = ({ buys }) => {
       </div>
 
       <div className='review-component'>
-         {showReview && <ReviewProducts />}
-         {showReview ? <p style={{cursor: "pointer"}} onClick={() => dontShowReviewComponent()}>Cerrar</p> : null}
+         {showReview && <ReviewProducts idproduct={buys.id}/>}
+         {showReview ? <p style={{cursor: "pointer"}} onClick={() => dontShowReviewComponent()}>Close </p> : null}
       </div>
 
       

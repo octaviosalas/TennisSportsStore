@@ -50,7 +50,7 @@ const NavBar = () => {
     <div className='conteiner-gral-nav'>
           <div className='conteiner-nav' >
              <div className='cont-pb'  >
-                <Link to={`/welcome/${userId}`} className='link'> <b><p className='my-tasks' id='inicio' title='Inicio'>Inicio</p></b></Link>
+                <Link to={`/welcome/${userId}`} className='link'> <b><p className='my-tasks' id='inicio' title='Inicio'>Home</p></b></Link>
                 <Link to={"/rackets"} className='link'> <b><p className='my-tasks' title='ver raquetas'  >Rackets</p></b> </Link>
                  <Link to={"/shoes"} className='link'><b><p className='my-pendt' title='Ver zapatillas'>Shoes</p></b></Link>
                  <Link to={"/tshirts"} className='link'> <b><p className='my-finish' title='Ver remeras'>T-Shirts</p></b> </Link>

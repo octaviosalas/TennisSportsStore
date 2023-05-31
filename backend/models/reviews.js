@@ -6,12 +6,15 @@ const reviewsSchema = mongoose.Schema( {
         type: String,
     }, 
    userId: { 
-        type: Number,
+        type: String,
     }, 
     review: { 
         type: String,
     },
     punctuation: { 
+        type: Number
+    },
+    productId: { 
         type: Number
     }
    

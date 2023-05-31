@@ -39,7 +39,7 @@ const StructureProducts = ({prod}) => {
         <div className='cart-prod'>
                  <div className='conteiner-img'>
                   <div className='cont-sec'>
-                       <h5 className='title-prod'>{prod.name}</h5>
+                       <h5 className='title-produ'>{prod.name}</h5>
                     <img src={fav} className='fav-img' title='agregar a favoritos' onClick={() => markAsFavourite(prod.id)}></img>
                   </div>
                        
@@ -54,7 +54,7 @@ const StructureProducts = ({prod}) => {
                  <div className='conteiner-detail-prod'>
                   <button className='btn-agreg' title='agregar al carrito' onClick={() => addToCartUser(prod)}>+</button>
                   <br />
-                    <Link to={`/viewDetail/${prod.id}`} className='link'><a className='view-detail'>Ver producto en detalle</a></Link>
+                    <Link to={`/viewDetail/${prod.id}`} className='link'><a className='view-detail'>View product Detail</a></Link>
                  </div>
           </div>
          

@@ -72,12 +72,14 @@
   .bt-sections { 
     width: 170px;
     font-size: 10px;
+    background-color: #ee644c; 
   }
 
   .bt-sections:hover { 
     width: 210px;
     color: black;
     font-size: 11px;
+    background-color: #ee644c; 
   }
 
   .cont-sections-users { 

@@ -67,6 +67,14 @@ export const favouriteProducts = async (req, res) => {
     }
   };
 
+  export const deleteFavourite = async (req, res) => { 
+    try {
+        await Favs.findByIdAndDelete(req.body.id);
+        res.send("Producto Eliminado de la seccion de Favoritos")
+     } catch (error) {
+        console.log(error)
+     }
+  }
 
-
+ 
    

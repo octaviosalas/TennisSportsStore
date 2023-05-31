@@ -4,7 +4,7 @@ import { saveReview, getReviews } from "../controllers/reviews.controllers.js";
 
 reviewsRoutes.post("/saveReview", saveReview)
 
-reviewsRoutes.get("/getReviews:userid", getReviews)
+reviewsRoutes.get("/getReviews/:productId", getReviews)
 
 
 export default reviewsRoutes;

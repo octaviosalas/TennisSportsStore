@@ -7,9 +7,10 @@ import axios from 'axios'
 
 
 
-const ReviewProducts = () => {
+const ReviewProducts = ({idproduct}) => {
 
       const userCtx = useContext(UserContext) 
+
 
       const [punctuation, setPunctuation] = useState("")
       const [review, setReview] = useState("")
@@ -44,7 +45,9 @@ const ReviewProducts = () => {
           name: name, 
           punctuation:punctuation,
           review: review,
-          userId: userId
+          userId: userId,
+          productId: idproduct //el id del producto que recibe la opinion es el ID que me llega por props. Osea, el ID del producto que seleccione
+
         }
         axios.post("http://localhost:4000/saveReview", myOpinion)
              

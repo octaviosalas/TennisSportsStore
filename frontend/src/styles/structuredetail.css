@@ -48,4 +48,13 @@
     margin-bottom: 10px;
   }
   
-  
+  .know-ops { 
+      text-decoration: underline;
+      font-size: 12px;
+      margin-top: 30px;
+      cursor: pointer;
+  }
+
+  .know-ops:hover { 
+    color: #db3d21;
+  }

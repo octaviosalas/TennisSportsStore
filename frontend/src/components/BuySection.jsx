@@ -31,7 +31,7 @@ const BuySection = ({addToCart}) => {
       <div className='bottom-section'>
         <button className='btn-acumulate' onClick={() => addOne()}>+</button>
 
-        <button className='btn-buy' onClick={() => addToCart(quantity)}>Agregar al Carrito</button> 
+        <button className='btn-buy' onClick={() => addToCart(quantity)}>Add to cart</button> 
 
         <button className='btn-rest' onClick={() => restOne()}>-</button>
       </div>

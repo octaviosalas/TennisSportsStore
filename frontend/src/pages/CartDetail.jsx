@@ -54,9 +54,9 @@ const CartDetail = () => {
        :
         <>
         <div>
-        <p>No hay productos en el carrito</p>
+        <p>There are no products in the cart</p>
          <br />
-         <Link to={`/welcome/${id}`}><p>Volver al inicio</p></Link>
+         <Link to={`/welcome/${id}`}><p>Back home</p></Link>
         </div>
       
         </>

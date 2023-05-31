@@ -47,12 +47,12 @@ const MyBuys = () => {
             <NavBar/>
         </div>
         <div>
-            <h4 style={{marginBottom: "1vh", textAlign: "center", fontWeight: "bold"}}>Estas son tus ultimas compras</h4>
+            <h4 style={{marginBottom: "1vh", textAlign: "center", fontWeight: "bold"}}>These are your last purchases</h4>
         </div>
         {userBuys.map((b) => <StructureMyBuys buys={b}/>)}
 
         <div>
-            <Link to={`/welcome/${userId}`} className='lnk'><p title='ir al inicio'>Volver al Inicio</p></Link>
+            <Link to={`/welcome/${userId}`} className='lnk'><p title='ir al inicio'>Back home</p></Link>
         </div>
     </div>
   )
