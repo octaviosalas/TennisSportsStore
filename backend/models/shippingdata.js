@@ -14,6 +14,9 @@ const shippingData = mongoose.Schema( {
     telephone: { 
         type: Number
     },
+    location: { 
+        type: String
+    },
     userid: { 
         type: String,
         required: true

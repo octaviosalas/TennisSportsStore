@@ -54,8 +54,9 @@ const StructureProducts = ({prod}) => {
                  <div className='conteiner-detail-prod'>
                   <button className='btn-agreg' title='agregar al carrito' onClick={() => addToCartUser(prod)}>+</button>
                   <br />
-                    <Link to={`/viewDetail/${prod.id}`} className='link'><a className='view-detail'>View product Detail</a></Link>
+
                  </div>
+                 <Link to={`/viewDetail/${prod.id}`} className='link-detail'><a className='view-detail'>View product Detail</a></Link>
           </div>
          
     

@@ -55,6 +55,7 @@
   
   .conteiner-detail-prod {
     margin-top: auto;
+    margin-right: 46px;
   }
   
   .view-detail {
@@ -64,8 +65,9 @@
     cursor: pointer;
   }
 
-  .link { 
+  .link-detail { 
     text-decoration: none;
+    margin-left: 1px;
   }
   
   .view-detail:hover {
@@ -74,9 +76,9 @@
 
   .btn-agreg { 
    width: 50px;
-   margin-left: 40px;
-   color:  #ee644c;
-   background-color: #d8d2d280;
+
+   color:  #f2f2f2;
+   background-color: #c1c0bf;
   }
 
   .btn-agreg:hover { 

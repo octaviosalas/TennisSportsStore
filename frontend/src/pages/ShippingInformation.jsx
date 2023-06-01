@@ -18,6 +18,7 @@ const ShippingInformation = ({prod}) => {
     const [province, setProvince] = useState("")
     const [location, setLocation] = useState("")
     const [telephone, setTelephone] = useState("")
+    const [msjNegative, setMsjNegative] = useState(false)
 
 
     useEffect(() => {
@@ -32,8 +33,8 @@ const ShippingInformation = ({prod}) => {
       setCloseShip(false)
     }
 
-  /*  const total = cartctx.totalPriceCart
-    console.log(total)*/
+    const total = cartctx.totalPriceCart()
+    console.log(total)
 
     const confirmBuy = () => { 
     
@@ -47,6 +48,9 @@ const ShippingInformation = ({prod}) => {
           })
              .then((res) => { 
               console.log(res.data)
+              setCloseShip(true) //cierra el componente Shipping
+              cartctx.cleanCart() //vacio al carrito de compras
+              alert("Compra realizada con exito")
              })
              .catch(err => console.log(err))
     }
@@ -62,9 +66,6 @@ const ShippingInformation = ({prod}) => {
         axios.post(`http://localhost:4000/saveData/${id}`, userDataShipping)
              .then((res) => {
               console.log(res.data)
-              setCloseShip(true) //cierra el componente Shipping
-              cartctx.cleanCart() //vacio al carrito de compras
-              alert("Compra realizada con exito")
              })
              .catch((err) => console.log(err))
     }
@@ -77,9 +78,24 @@ const ShippingInformation = ({prod}) => {
     const getDataOfShipping = () => { 
       axios.get(`http://localhost:4000/getUserData/${id}`)
            .then((res) => { 
-              console.log(res.data)
+
+              const docs = res.data
+              if(docs.length === 0) { 
+                setMsjNegative(true)
+              } else { 
+                docs.map((d) => { 
+                  setAdress(d.adress)
+                  setProvince(d.province)
+                  setTelephone(d.telephone)
+                  setLocation(d.location)
+                })
+              }
+             
            })
-           .catch(err => console.log(err))
+           .catch(err => { 
+               console.log(err)
+               console.log("No hay datos")
+           })
     }
 
 
@@ -98,9 +114,6 @@ const ShippingInformation = ({prod}) => {
         
           </div>
 
-         
-     
-
       <div className="container-rigth-left">
 
     
@@ -118,9 +131,14 @@ const ShippingInformation = ({prod}) => {
           <label htmlFor="" className="label-text">Telephone</label>
           <input type="text" className="input-field" placeholder='Telephone' value={telephone} onChange={(e) => setTelephone(e.target.value)}/>
 
-          <p style={{fontSize: "12px"}}>Total Amount: </p>
+          <p style={{fontSize: "12px"}}>Total Amount: {total} ARS</p>
+
           <button onClick={() =>  functionsForSubmit()} className='go-buy'>Go Buy</button>
-          <p className='last-dates' onClick={() => getDataOfShipping()}>Use mi Last Dates</p>
+
+          <p className='last-dates' onClick={() => getDataOfShipping()}>Use data from my last purchase</p>
+
+          {msjNegative && <p className='data-ship'>Thers not shipping data registered</p>}
+
         </div>
 
         <div className="right-section">
@@ -132,6 +150,7 @@ const ShippingInformation = ({prod}) => {
 
               <div className="div-shipping-some">
                 <p className="prod-name-shipping">{prod.name}</p>
+                <p className="prod-quantity-shipping">{prod.quantity} unit</p>
                 <p className="prod-price-shipping">{prod.price} ARS</p>
          
               </div>

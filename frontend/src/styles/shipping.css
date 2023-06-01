@@ -67,6 +67,11 @@
     color: #888;
   }
 
+  .prod-quantity-shipping { 
+    color: #888;
+    font-size: 9px;
+  }
+
 
   .shipping-img { 
     width: 75px;
@@ -111,4 +116,8 @@
     color: black;
     margin-top: 30px;
     cursor: pointer;
+  }
+
+  .data-ship { 
+    font-size: 12px;
   }

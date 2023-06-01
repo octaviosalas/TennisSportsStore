@@ -36,7 +36,10 @@ const Login = ({}) => {
                     navigate(`/welcome/${data?.user.id}`)      //como mi ruta devuelve un json llamado user que tiene "id" y "name", y a ese json accedo con "data". Le digo que me enlace el "data.user.id" a la ruta welcome.
                 },1000)
              })
-             .catch((err) => alert(err))
+             .catch((err) => { 
+              console.log(err)
+              alert("El usuario que ingresaste no esta registrado. Por favor, registrate para iniciar sesion")
+             })
     } 
 
   return (
