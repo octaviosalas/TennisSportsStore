@@ -68,17 +68,22 @@
     text-overflow: ellipsis; /* Agrega puntos suspensivos (...) al final del texto si se desborda */
   }
 
+  .gral-confirmate { 
+    text-align: center;
+  }
+
   .fin { 
-    margin-left: 205px;
-    width: 300px;
+  
+    width: 200px;
     color:  #ee644c;
     background-color: #f2f2f2;
+    font-size: 14px;
    
   }
 
   .fin:hover { 
-    margin-left: 205px;
-    width: 300px;
+
+    width: 200px;
     color:  black;
     background-color: #ee644c;
   }

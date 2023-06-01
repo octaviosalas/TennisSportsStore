@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 
 const shippingData = mongoose.Schema( { 
-    homeAdress: { 
+    adress: { 
         type: String,
     }, 
     province: { 

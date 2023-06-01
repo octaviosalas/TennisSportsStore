@@ -147,7 +147,8 @@ b:hover {
       }
   
       button:hover {
-        background-color: #ee644c;
+        background: black;
+        color: #ee644c;;
       }
     
 .user-created { 

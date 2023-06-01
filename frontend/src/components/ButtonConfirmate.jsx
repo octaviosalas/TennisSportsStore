@@ -15,14 +15,15 @@ const ButtonConfirmate = () => {
 
   const showTheShipping = () => { 
     setShowShipping(true)
+ 
   }
 
- 
+  
 
     return ( 
-      <div>
+      <div className='gral-confirmate'>
             <button className='fin' onClick={() =>  showTheShipping()}>coordinate shipping</button> 
-             {showShipping ? <ShippingInformation prod={cartCtx.products}/> : null}
+              {showShipping ? <ShippingInformation prod={cartCtx.products}/> : null}
          
       </div>
     )

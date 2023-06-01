@@ -7,22 +7,33 @@ import axios from 'axios'
 import { Link } from 'react-router-dom'
 
 const ShippingInformation = ({prod}) => {
-    console.log(prod)
+  
     const cartctx = useContext(CartContext)
     const userCtx = useContext(UserContext)
 
     const [id, setId] = useState(userCtx.userId);
+    const [closeShip, setCloseShip] = useState(false)
+
+    const [adress, setAdress] = useState("")
+    const [province, setProvince] = useState("")
+    const [location, setLocation] = useState("")
+    const [telephone, setTelephone] = useState("")
+
 
     useEffect(() => {
       setId(userCtx.userId);
     }, [userCtx.userId]);
 
-    useEffect(() => { 
-      console.log(cartctx.products);
-    }, [])
+    const closeSh = () => { 
+      setCloseShip(true)
+    }
+    
+    const openSh = () => { 
+      setCloseShip(false)
+    }
 
-    const total = cartctx.totalPriceCart
-    console.log(total)
+  /*  const total = cartctx.totalPriceCart
+    console.log(total)*/
 
     const confirmBuy = () => { 
     
@@ -40,37 +51,76 @@ const ShippingInformation = ({prod}) => {
              .catch(err => console.log(err))
     }
 
-      
-    
+    const saveDataShipping = () => { 
+        const userDataShipping = { 
+          adress: adress,
+          province: province,
+          telephone: telephone,
+          location: location,
+          userid: id
+        }
+        axios.post(`http://localhost:4000/saveData/${id}`, userDataShipping)
+             .then((res) => {
+              console.log(res.data)
+              setCloseShip(true) //cierra el componente Shipping
+              cartctx.cleanCart() //vacio al carrito de compras
+              alert("Compra realizada con exito")
+             })
+             .catch((err) => console.log(err))
+    }
 
+    const functionsForSubmit = () => { 
+      confirmBuy()
+      saveDataShipping()
+    }
 
-
+    const getDataOfShipping = () => { 
+      axios.get(`http://localhost:4000/getUserData/${id}`)
+           .then((res) => { 
+              console.log(res.data)
+           })
+           .catch(err => console.log(err))
+    }
 
 
   return (
     <div className="container">
-      <div className="header">
-        <h3>Como queres recibir tu compra?</h3>
-       
-      </div>
+      
+        {closeShip ? 
+         <>
+          <Link to={"/rackets"}><p className='back-home' title='Back to the Home'>Back Home</p></Link> 
+          <p className='open-shipping' title='Cordinate Shipping' onClick={() => openSh()}>Coordinate Shipping</p>
+         </>  : 
+        <>
+          <div className="header">
+            <h3>Insert shipping information</h3> 
+            <p className='close-shipping' onClick={() => closeSh()}>X</p>
+        
+          </div>
+
+         
+     
 
       <div className="container-rigth-left">
+
+    
+        
         <div className="left-section">
-          <label htmlFor="" className="label-text">Direccion de Envio</label>
-          <br />
-          <input type="text" className="input-field" placeholder='Direccion' />
+          <label htmlFor="" className="label-text">Shipping Adress</label>
+          <input type="text" className="input-field" placeholder='Adress' value={adress} onChange={(e) => setAdress(e.target.value)} />
 
-          <label htmlFor="" className="label-text">Provincia</label>
-          <input type="text" className="input-field" placeholder='Provincia' />
+          <label htmlFor="" className="label-text">Province</label>
+          <input type="text" className="input-field" placeholder='Province' value={province} onChange={(e) => setProvince(e.target.value)}/>
 
-          <label htmlFor="" className="label-text">Localidad</label>
-          <input type="text" className="input-field" placeholder='localidad' />
+          <label htmlFor="" className="label-text">Location</label>
+          <input type="text" className="input-field" placeholder='Location' value={location} onChange={(e) => setLocation(e.target.value)}/>
 
-          <label htmlFor="" className="label-text">Telefono</label>
-          <input type="text" className="input-field" placeholder='telefono' />
+          <label htmlFor="" className="label-text">Telephone</label>
+          <input type="text" className="input-field" placeholder='Telephone' value={telephone} onChange={(e) => setTelephone(e.target.value)}/>
 
-          <p style={{fontSize: "12px"}}>Total a Pagar: {total}</p>
-          <button onClick={() => confirmBuy()} className='go-buy'>Go Buy</button>
+          <p style={{fontSize: "12px"}}>Total Amount: </p>
+          <button onClick={() =>  functionsForSubmit()} className='go-buy'>Go Buy</button>
+          <p className='last-dates' onClick={() => getDataOfShipping()}>Use mi Last Dates</p>
         </div>
 
         <div className="right-section">
@@ -82,16 +132,25 @@ const ShippingInformation = ({prod}) => {
 
               <div className="div-shipping-some">
                 <p className="prod-name-shipping">{prod.name}</p>
-                <p className="prod-price-shipping">{prod.price}</p>
+                <p className="prod-price-shipping">{prod.price} ARS</p>
          
               </div>
             </div>
             
           ))}
+            
+       
+          
     
         </div>
       </div>   
-      <Link to={"/rackets"}><p>Back Home</p></Link>
+    
+        
+        </>
+        
+        }
+      
+
     </div>
   );
 

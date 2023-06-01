@@ -7,6 +7,13 @@
   .header {
     background-color: #f2f2f2;
     padding: 20px;
+    display: flex;
+    width: 100%;
+  }
+
+  .close-shipping { 
+    margin-left: 410px;
+    cursor: pointer;
   }
   
   .container-rigth-left {
@@ -62,15 +69,20 @@
 
 
   .shipping-img { 
-    width: 70px;
-    height: 70px;
+    width: 75px;
+    height: 75px;
+  }
+
+  .shipping-img:hover { 
+    width: 105px;
+    height: 105px;
   }
 
   .close-shipping { 
-    width: 20px;
-    height: 20px;
-    font-size: 10px;
-    float: right;
+   
+    font-size: 12px;
+
+
   }
 
   .go-buy { 
@@ -78,3 +90,25 @@
     font-size: 14px;
   }
   
+  .open-shipping { 
+    color: black;
+    text-decoration: underline;
+    font-size: 12px;
+    cursor: pointer;
+  }
+
+  .back-home { 
+    color: black;
+    text-decoration: underline;
+    font-size: 12px;
+    cursor: pointer;
+  }
+
+  .last-dates { 
+    font-size: 10px;
+    background-color: #f2f2f2;
+    text-decoration: underline;
+    color: black;
+    margin-top: 30px;
+    cursor: pointer;
+  }
