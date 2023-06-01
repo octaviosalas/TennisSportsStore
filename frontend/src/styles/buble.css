@@ -1,9 +1,20 @@
 .buble-item { 
     border-radius: 50%;
+    background-color: #ee644c; ;
     width: 29px;
     height: 26px;
     font-size: 12px;
     position: absolute;
     right: 9px;
     bottom: 35px;
+}
+
+.welcome { 
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ececec;
 }

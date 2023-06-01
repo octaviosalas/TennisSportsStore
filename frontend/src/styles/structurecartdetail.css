@@ -15,8 +15,8 @@
   }
   
   .tr-item {
-    background-color: #ee644c;
-    color: white;
+    background-color: #f2f2f2;
+    color: #ee644c;
     font-weight: bold;
   }
   
@@ -46,7 +46,7 @@
   }
   
   .btn-eliminar:hover {
-    background-color: #a95142;
+    background-color: #ee644c;
   }
   
   /* Nuevos estilos */
@@ -118,3 +118,4 @@
   font-size: 12px;
   margin-left: 170px;
  }
+ 

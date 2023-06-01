@@ -20,26 +20,10 @@ const CartDetail = () => {
   }, [userCtx.userId]);
 
   useEffect(() => { 
-    const docs = cartCtx.products;
-  })
+    console.log(cartCtx.products);
+  }, [])
 
-  const saveBuyInDb = () => { 
-    const docs = cartCtx.products;
-    console.log(docs)
-
-      axios.post(`http://localhost:4000/buy/${id}`, docs, {
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      })
-         .then((res) => { 
-          console.log(res.data)
-
-         })
-         .catch(err => console.log(err))
-  }
-
-
+ 
   
   
   return (
@@ -50,7 +34,7 @@ const CartDetail = () => {
           {cartCtx.products.map((p) => <StructureCartDetail productsToBuy={p}/>)}
    
      
-       {cartCtx.products.length !== 0 ? <ButtonConfirmate sendBuy={saveBuyInDb}/>
+       {cartCtx.products.length !== 0 ? <ButtonConfirmate />
        :
         <>
         <div>

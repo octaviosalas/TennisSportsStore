@@ -7,7 +7,7 @@
     right: 0;
     z-index: 999;
     padding: 10px 20px;
-    background-color: rgb(30, 28, 28);
+   background-color:  #f2f2f2;
   }
 
   
@@ -37,7 +37,7 @@
   .my-tasks:hover,
   .my-pendt:hover,
   .my-finish:hover {
-    color: #ee644c;
+    color: black;
   }
   
   .img-logo {
@@ -79,7 +79,7 @@
     width: 210px;
     color: black;
     font-size: 11px;
-    background-color: #ee644c; 
+    background-color: #f2f2f2;
   }
 
   .cont-sections-users { 

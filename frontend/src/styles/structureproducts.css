@@ -74,11 +74,15 @@
 
   .btn-agreg { 
    width: 50px;
-   margin-left: 50px;
+   margin-left: 40px;
+   color:  #ee644c;
+   background-color: #d8d2d280;
   }
 
   .btn-agreg:hover { 
-    color: black;}
+    color: black;
+  background-color: #ee644c;
+}
 
   .map-div { 
     display: flex;

@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
 import { useParams } from 'react-router-dom'
+import "../styles/buble.css"
 import axios from 'axios'
 import NavBar from './NavBar'
 import { useEffect, useState } from 'react'
@@ -31,7 +32,7 @@ const Welcome = () => {
   }, [userCtx.userId])
 
   return (
-    <div>
+    <div className='welcome'>
           <NavBar />
       <div>
            <h4>Welcome {name}!</h4>

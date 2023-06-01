@@ -7,6 +7,7 @@ import usersRoutes from "./routes/users.routes.js"
 import productsRoutes from "./routes/products.routes.js"
 import buyRoutes from "./routes/buy.routes.js"
 import reviewsRoutes from "./routes/reviews.routes.js"
+import shippingDataRoutes from "./routes/shippingdata.routes.js"
 
 
 
@@ -24,6 +25,7 @@ app.use(usersRoutes)
 app.use(productsRoutes)
 app.use(buyRoutes)
 app.use(reviewsRoutes)
+app.use(shippingDataRoutes)
 
 
 

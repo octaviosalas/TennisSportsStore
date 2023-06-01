@@ -69,8 +69,18 @@
   }
 
   .fin { 
-    margin-left: 135px;
+    margin-left: 205px;
     width: 300px;
+    color:  #ee644c;
+    background-color: #f2f2f2;
+   
+  }
+
+  .fin:hover { 
+    margin-left: 205px;
+    width: 300px;
+    color:  black;
+    background-color: #ee644c;
   }
 
   .finish-bbbuy { 
