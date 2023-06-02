@@ -1,6 +1,6 @@
 import express from "express"
 const productsRoutes = express.Router()
-import { getRackets, getShoes, getTshirts, getProdById, markAsFavourite, favouriteProducts, deleteFavourite } from "../controllers/products.controllers.js"
+import { getRackets, getShoes, getTshirts, getProdById, markAsFavourite, favouriteProducts, deleteFavourite, ofertas } from "../controllers/products.controllers.js"
 
 
 productsRoutes.post("/product/:id", getProdById)
@@ -10,6 +10,7 @@ productsRoutes.get("/tshirts", getTshirts)
 productsRoutes.put("/favourite", markAsFavourite)
 productsRoutes.post("/deleteFavourite", deleteFavourite)
 productsRoutes.get("/favouritesProducts/:userId", favouriteProducts)
+productsRoutes.get("/ofertas", ofertas)
 
 
 

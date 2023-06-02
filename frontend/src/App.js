@@ -16,6 +16,8 @@ import MyBuys from "./pages/MyBuys";
 import ReviewProducts from "./components/ReviewProducts";
 import ProductsOpinions from "./pages/ProductsOpinions";
 import ShippingInformation from "./pages/ShippingInformation";
+import Settings from "./pages/Settings";
+import Oferts from "./components/Oferts";
 
 
 function App() {
@@ -37,6 +39,7 @@ function App() {
                  <Route path="/usercart" element={<CartDetail />}></Route>
                  <Route path="/favourites" element={<Favourites />}></Route>
                  <Route path="/myBuys/:userId" element={<MyBuys />}></Route>
+                 <Route path="/settings" element={<Oferts />}></Route>
                  <Route path="/review/:userId" element={<ReviewProducts />}></Route>
                  <Route path="/opinions/:productid" element={<ProductsOpinions />}></Route>
                  <Route path="/shippingInformation" element={<ShippingInformation />}></Route>

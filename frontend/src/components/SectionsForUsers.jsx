@@ -19,6 +19,7 @@ const SectionsForUsers = () => {
     <div className='cont-sections-users' > 
           <Link to={`/myBuys/${userId}` }><button className='bt-sections'>View my buys</button></Link>
           <Link to={"/favourites"}><button className='bt-sections'>View my Favourites</button></Link>
+          <Link to={`/settings`}><button className='bt-sections'>Settings</button></Link>
          <Link to={"/"}><button className='bt-sections'>Sign off</button></Link>
     </div>
   )
