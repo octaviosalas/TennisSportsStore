@@ -3,7 +3,7 @@ import shoes from "../products/shoes.js"
 import tshirts from "../products/tshirts.js"
 import { allProducts } from "../products/allProducts.js";
 import Favs from "../models/favouriteproducts.js"
-import Oferts from "../models/oferts.js";
+
 
 export const getRackets = (req, res) => { 
     res.send(rackets)
@@ -86,3 +86,19 @@ export const favouriteProducts = async (req, res) => {
         
       }
   } 
+
+
+  export const searchOfertById = async (req, res) => { 
+    
+    const {id} = req.params 
+
+    try {
+      const searchOfert = await Oferts.findById({_id: id})
+      res.send(searchOfert)
+    } catch (error) {
+       console.log(error)
+    }
+  }
+
+
+  

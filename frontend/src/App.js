@@ -17,7 +17,8 @@ import ReviewProducts from "./components/ReviewProducts";
 import ProductsOpinions from "./pages/ProductsOpinions";
 import ShippingInformation from "./pages/ShippingInformation";
 import Settings from "./pages/Settings";
-import Oferts from "./components/Oferts";
+
+
 
 
 function App() {
@@ -36,10 +37,12 @@ function App() {
                  <Route path="/shoes" element={<Shoes />}></Route>
                  <Route path="/tshirts" element={<Tshirts />}></Route>
                  <Route path="/viewDetail/:id" element={<ViewDetailProduct />}></Route>
+                
                  <Route path="/usercart" element={<CartDetail />}></Route>
                  <Route path="/favourites" element={<Favourites />}></Route>
                  <Route path="/myBuys/:userId" element={<MyBuys />}></Route>
-                 <Route path="/settings" element={<Oferts />}></Route>
+                 <Route path="/settings" element={<Settings />}></Route>
+               
                  <Route path="/review/:userId" element={<ReviewProducts />}></Route>
                  <Route path="/opinions/:productid" element={<ProductsOpinions />}></Route>
                  <Route path="/shippingInformation" element={<ShippingInformation />}></Route>
