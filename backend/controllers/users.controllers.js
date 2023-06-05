@@ -80,6 +80,59 @@ export const registerUser = async (req, res) => {
       };
 
 
+      export const changeUserData = async (req, res) => { 
+       
+        const { email, lastPassword, newPassword } = req.body
+
+        try {
+             const searchTheUserEmail = await User.findOne({email: email})
+             if(searchTheUserEmail) { 
+              console.log(" El Mail existe en la base de datos.. continuemos con el proceso ✔")
+              bcrypt.compare(lastPassword, searchTheUserEmail.password)
+                    .then( async (correct) => {
+                        if(correct) { 
+                          console.log("Hice la comparacion de las contraseñas, y coinciden.. sigamos con el proceso ✔ ")
+
+                          const hashedNewPassword = await bcrypt.hash(newPassword, 10)
+                          await User.findOneAndUpdate({ email: email }, { password: hashedNewPassword });
+                          console.log("Contraseña actualizada correctamente");
+                          res.send("Contraseña actualizada correctamente");
+
+                        } else { 
+                          console.log("The password is not the same")
+                        }
+                     })
+                     .catch((err) => { 
+                      res.send("Error en la contraseña vieja")
+                      console.log("Error en la contraseña vieja")
+                     })
+
+             } else { 
+              console.log("El Mail no existe")
+             }
+
+        } catch (error) {
+           console.log(error)
+        }
+      } 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //OTRA OPCION PARA REGISTER USER
 
 
