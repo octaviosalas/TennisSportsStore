@@ -35,6 +35,7 @@ const BuySection = ({addToCart}) => {
 
         <button className='btn-rest' onClick={() => restOne()}>-</button>
       </div>
+      <br />
         {carritoCtx.products.length >= 1 ? <FinishBuy /> : null}
     </div>
    

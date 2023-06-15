@@ -10,13 +10,15 @@ export const saveBuy =  async  (req, res) => {
   try {
     
    const mapProducts = await productos.map((productos) => { 
-    const { quantity, category, name, price, id } = productos;
+    const { quantity, category, name, price, img, id } = productos;
+    console.log(productos)
     const compranueva =  new Buys( { 
         quantity,
         category,
         name,
         price,
         userid: userid,
+        img: img,
         id: id
     })
        return Buys.insertMany(compranueva) //Uso insertMany para que me permita guardar mas de una vez el mismo producto

@@ -5,7 +5,7 @@ const rackets =  [
         "price": 122000,
         "category": "rackets",
         "brand": "Head",
-        "img":[ "https://d3ugyf2ht6aenh.cloudfront.net/stores/002/050/152/products/235621_ti_reward_mm_usa_trade_nube1-fca0aedd6bbe4b564d16467418819607-640-0.webp", "https://http2.mlstatic.com/D_NQ_NP_877569-MLA69855675284_062023-O.webp", "https://www.tradeinn.com/f/13968/139680238/head-raqueta-tenis-radical-mp-2023.jpg" ],
+        "img": [ "https://d3ugyf2ht6aenh.cloudfront.net/stores/002/050/152/products/235621_ti_reward_mm_usa_trade_nube1-fca0aedd6bbe4b564d16467418819607-640-0.webp", "https://http2.mlstatic.com/D_NQ_NP_877569-MLA69855675284_062023-O.webp", "https://www.tradeinn.com/f/13968/139680238/head-raqueta-tenis-radical-mp-2023.jpg" ],
         "favoruite": false
     }, 
     { 
@@ -59,7 +59,7 @@ const rackets =  [
         "price": 118100,
         "category": "rackets",
         "brand": "Yonex",
-        "img": [ "https://http2.mlstatic.com/D_NQ_NP_742771-MLA69428331636_052023-O.webp", "https://tennishead.net/wp-content/uploads/2023/02/2021VCOREGAME-1-Edited.png", "https://img.tennisonly.com.au/watermark/rs.php?path=VCR100-2.jpg&nw=455"],
+        "img": ["https://www.onlytenis.com/24488-large_default/raqueta-babolat-pure-aero-300-gr-2023.jpg", "https://http2.mlstatic.com/D_NQ_NP_736047-MLA47915953193_102021-O.webp", "https://www.puntosport.com.ar/9268-large_default/raqueta-babolat-pure-aero-grip-2-1013541912.jpg"],
         "favourite": false
     }, 
     { 

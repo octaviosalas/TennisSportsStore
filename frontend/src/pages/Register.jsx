@@ -46,8 +46,8 @@ const Register = () => {
 
           <div className="formContainer">
 
-            <h3>Bienvenido al E-Commerce</h3>
-            <h2>Registrate para comenzar!</h2>
+            <h3 style={{fontSize:"2.0vh", textAlign:"center"}}>Bienvenido al E-Commerce</h3>
+            <h2 style={{fontSize:"1.8vh"}}>Registrate para comenzar!</h2>
 
             <form >
 

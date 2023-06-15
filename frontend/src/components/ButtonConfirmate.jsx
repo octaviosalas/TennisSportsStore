@@ -21,7 +21,7 @@ const ButtonConfirmate = () => {
   
 
     return ( 
-      <div className='gral-confirmate'>
+      <div className='gral-confirmate' style={{marginTop:"2vh"}}>
             <button className='fin' onClick={() =>  showTheShipping()}>coordinate shipping</button> 
               {showShipping ? <ShippingInformation prod={cartCtx.products}/> : null}
          

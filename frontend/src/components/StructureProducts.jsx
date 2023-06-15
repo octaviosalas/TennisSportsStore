@@ -72,7 +72,7 @@ const StructureProducts = ({prod}) => {
       
       <Card sx={{ maxWidth: 345, height:"55vh", width:"34vh",  marginTop:"2vh", marginLeft:"2vh"}} >
            <CardHeader avatar={<Avatar sx={{ bgcolor: red[500] }} aria-label="recipe"> {prod.category === "rackets" ? "R" : prod.category === "shoes" ? "S" : prod.category === "tshirts" && "T"}</Avatar>}
-               action={<IconButton aria-label="settings"> <FavoriteIcon /> </IconButton>} title={prod.name} subheader={prod.brand} />
+               action={<IconButton aria-label="settings" onClick={() => markAsFavourite(prod.id)}> <FavoriteIcon /> </IconButton> } title={prod.name} subheader={prod.brand} />
                  <CardMedia component="img" height="194" image={prod.img[0]} style={{height: "60%", width: "60%", objectFit: "contain", marginLeft:"8vh"}}/>
                    <CardContent>
                       <Typography variant="body2" color="text.secondary">

@@ -58,3 +58,11 @@
   .know-ops:hover { 
     color: #db3d21;
   }
+
+
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    background-color: black;
+    color: black; /* Establecer el color del icono a negro */
+  }
+  

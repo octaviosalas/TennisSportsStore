@@ -44,7 +44,7 @@ const StructureFavourites = ({prod}) => {
                 </div>
                      
                      <br />
-                    <img className='img-product' src={prod.img} alt="" />
+                    <img className='img-product' src={prod.img[0]} alt="" />
                </div>
                    <br />
                <div className='conteiner-price'>

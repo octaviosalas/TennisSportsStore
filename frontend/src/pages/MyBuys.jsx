@@ -12,18 +12,23 @@ const MyBuys = () => {
     const [userId, setUserId] = useState(userCtx.userId);
     const [userBuys, setUserBuys] = useState([])
     const [msj, setMsj] = useState(false)
+    const [idForImage, setIdForImage] = useState([])
    
     useEffect(() => {
         setUserId(userCtx.userId);
         console.log(userCtx.userId)
       }, [userCtx.userId])
 
+
+      useEffect(() => { 
+                  console.log(idForImage)
+      }, [idForImage])
+
       function getBuysOfTheUser() { 
        return axios.get(`http://localhost:4000/getBuys/${userId}`)
                    .then((res) =>  { 
                     const purchases = res.data
                     if(purchases.length !== 0) { 
-                        console.log(purchases)
                         return purchases
                     } else { 
                         setMsj(true)
@@ -36,7 +41,9 @@ const MyBuys = () => {
 
       useEffect(() => { 
         getBuysOfTheUser()
-                    .then((res) => setUserBuys(res))
+                    .then((res) => {
+                        setUserBuys(res)                  
+                    })
                     .catch((err) => console.log(err))
       }, [])
 

@@ -55,7 +55,7 @@ const StructureCartDetail = ({productsToBuy}) => {
       action={<IconButton aria-label="settings"> <MoreVertIcon /> </IconButton>}
       title={productsToBuy.name}
       subheader={"Quantity:" + productsToBuy.quantity}/>
-    <CardMedia component="img" height="194"  image={productsToBuy.img}  style={{height: "60%", width: "60%", objectFit: "contain", marginLeft:"8vh"}}/>
+    <CardMedia component="img" height="194"  image={productsToBuy.img[0]}  style={{height: "60%", width: "60%", objectFit: "contain", marginLeft:"8vh"}}/>
     <CardContent>
       <Typography variant="body2" color="text.secondary">Price Unity: {productsToBuy.price} ARS</Typography>
     </CardContent>

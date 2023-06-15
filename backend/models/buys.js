@@ -19,6 +19,9 @@ const buysSchema = mongoose.Schema( {
         type: String,
         required: true
     },
+    img: { 
+        type: [String]
+    },
     id: { 
         type: Number
     }

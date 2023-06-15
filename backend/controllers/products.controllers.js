@@ -68,7 +68,7 @@ export const favouriteProducts = async (req, res) => {
     }
   };
 
-  export const deleteFavourite = async (req, res) => { 
+export const deleteFavourite = async (req, res) => { 
     try {
         await Favs.findByIdAndDelete(req.body.id);
         res.send("Producto Eliminado de la seccion de Favoritos")
@@ -78,7 +78,7 @@ export const favouriteProducts = async (req, res) => {
   }
 
  
-  export const ofertas = async (req, res) => { 
+export const ofertas = async (req, res) => { 
       try {
         const foto = await Oferts.find()
         res.send(foto)
@@ -88,7 +88,7 @@ export const favouriteProducts = async (req, res) => {
   } 
 
 
-  export const searchOfertById = async (req, res) => { 
+export const searchOfertById = async (req, res) => { 
     
     const {id} = req.params 
 
@@ -100,5 +100,17 @@ export const favouriteProducts = async (req, res) => {
     }
   }
 
+export const getImages =  (req, res) => { 
+     const {id} = req.params
+
+     try {
+      const searchImage =  allProducts.find((product) => product.id == id)
+      res.send([searchImage])
+   
+    } catch (error) {
+       console.log(error)
+    }
+
+}
 
   

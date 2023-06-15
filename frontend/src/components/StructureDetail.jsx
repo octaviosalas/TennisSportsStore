@@ -1,4 +1,5 @@
-
+import { useParams } from "react-router-dom"
+import 'bootstrap/dist/css/bootstrap.min.css'; //importacion de bootstrap
 import "../styles/structuredetail.css"
 import BuySection from './BuySection'
 import NavBar from "../pages/NavBar"
@@ -21,12 +22,16 @@ import Carousel from 'react-bootstrap/Carousel';
 const StructureDetail = ({product}) => {
      
     const carritoCtx = useContext(CartContext)
+    const {id} = useParams()
 
 
 
     const [dataOpinions, setDataOpinions] = useState([])
     const [showOpinions, setShowOpinions] = useState(false)
     const [msjNothing, setMsjNothing] = useState(false)
+    const [firstImage, setFirstImage] = useState("")
+    const [secondImage, setSecondImage] = useState("")
+    const [threeImage, setThreeImage] = useState("")
 
       
    const addToCartUser = (quantity) => { 
@@ -36,6 +41,22 @@ const StructureDetail = ({product}) => {
      useEffect(() => { 
           console.log(carritoCtx)
       }, [[carritoCtx.products]])
+
+      useEffect(() => { 
+          axios.get(`http://localhost:4000/getImages/${id}`)
+               .then((res) => { 
+                    console.log(res.data)
+                    const docs = res.data
+                    docs.map((doc) => { 
+                               setFirstImage(doc.img[0])
+                              setSecondImage(doc.img[1])
+                              setThreeImage(doc.img[2])    
+                    })
+               })
+               .catch((err) => { 
+                    console.log(err)
+               })
+      }, [])
 
 
     const getProductOpinions = () => { 
@@ -75,9 +96,13 @@ const StructureDetail = ({product}) => {
      <div>
           <NavBar />
      </div>
-         <div className='other-gral-detail-prod'>
+         <div className='other-gral-detail-prod' style={{height:"55vh", width:"35vh"}}>
                <div className='img-cont-prod'>
-                    <img src={product.img} alt="" className='img-prod-detail'/>
+               <Carousel className='img-item' variant="left">
+                    <Carousel.Item style={{height:"29vh"}}> <img className="d-block w-100 imgimg"  src={firstImage}  alt="First slide" style={{height:"24vh"}}/> </Carousel.Item>
+                    <Carousel.Item style={{height:"29vh"}}> <img className="d-block w-100 imgimg" src={secondImage} alt="Second slide"  style={{height:"24vh"}}/></Carousel.Item>
+                    <Carousel.Item style={{height:"29vh"}}> <img className="d-block w-100 imgimg" src={threeImage} alt="Third slide" style={{height:"24vh"}}/> </Carousel.Item>
+                 </Carousel> 
                </div>
 
                <div className='cont-name-price-prod'>

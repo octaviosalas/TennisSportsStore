@@ -48,8 +48,8 @@ const Login = ({}) => {
 
           <div className="formContainer">
 
-            <h3>Bienvenido </h3>
-            <h2>Inicia Sesion para ir a comprar!</h2>
+          
+            <h2 style={{fontSize:"1.8vh"}}>Inicia Sesion para ir a comprar!</h2>
 
             <form >
 
