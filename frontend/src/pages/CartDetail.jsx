@@ -30,8 +30,11 @@ const CartDetail = () => {
     <div className='gral-cart-detail'>
       
       <NavBar />
-   
+
+      <div style={{display: "flex"}}>
           {cartCtx.products.map((p) => <StructureCartDetail productsToBuy={p}/>)}
+      </div>
+   
    
      
        {cartCtx.products.length !== 0 ? <ButtonConfirmate />

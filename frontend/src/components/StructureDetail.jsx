@@ -1,14 +1,20 @@
-import React, { useState } from 'react'
+
 import "../styles/structuredetail.css"
 import BuySection from './BuySection'
 import NavBar from "../pages/NavBar"
 import SizesShoes from './SizesShoes'
 import Sizes from './Sizes'
-import { useContext, useEffect } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import CartContext from '../store/cart.context.js'
 import { Link } from 'react-router-dom'
 import axios from "axios"
 import ProductsOpinions from '../pages/ProductsOpinions'
+
+import * as React from 'react';
+import Button from '@mui/material/Button';
+import DeleteIcon from '@mui/icons-material/Delete';
+import SendIcon from '@mui/icons-material/Send';
+import Stack from '@mui/material/Stack';
 
 const StructureDetail = ({product}) => {
      
@@ -91,7 +97,9 @@ const StructureDetail = ({product}) => {
          <div>
               {showOpinions &&  <ProductsOpinions reviews={dataOpinions}/> } 
 
-              {showOpinions ?  <button className='btn-close-ops' onClick={() => closeOpinions()}>Close Opinions</button> : null}
+              {showOpinions ? <Stack direction="row" spacing={2}> <Button variant="outlined" startIcon={<DeleteIcon />} onClick={() => closeOpinions()} style={{marginTop:"1.5vh", color:"black"}}> Close Opinions </Button></Stack> : null}
+
+         
 
               {msjNothing &&  
 

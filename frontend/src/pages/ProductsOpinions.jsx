@@ -1,27 +1,41 @@
-import React from 'react'
+
 import "../styles/productopinions.css"
+import * as React from 'react';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import Divider from '@mui/material/Divider';
+import ListItemText from '@mui/material/ListItemText';
+import ListItemAvatar from '@mui/material/ListItemAvatar';
+import Avatar from '@mui/material/Avatar';
+import Typography from '@mui/material/Typography';
+
+
+
+
+
 const ProductsOpinions = ({ reviews }) => {
     
     
     return (
-      <div className='opinions-container'>
-        <div className='opinions-scroll'>
-          {reviews.map((opinion) => (
-            <div lassName='gral-opinions-div'>
-              <div className='div-of-name-pun'>
-                <p className='op-name'>Name: <b className='b'>{opinion.name}</b></p>
-                <p className='op-score'>Score: <b className='b'>{opinion.punctuation}</b></p>
-              </div>
-              <div className='div-of-review'>
-                <p className='b'> {opinion.review}</p>
-               
-              </div>
-              <hr className='hr-item'/>
-            </div>
-          ))}
-        </div>
-      </div>
+
+      reviews.map((opinion) => ( 
+        <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
+        <ListItem alignItems="flex-start">
+          <ListItemAvatar> <Avatar alt="Remy Sharp" /> </ListItemAvatar>
+          <ListItemText primary={opinion.name} secondary={
+              <React.Fragment>
+                <Typography  sx={{ display: 'inline' }} component="span" variant="body2" color="text.primary">
+      
+                </Typography>
+                 { opinion.review}
+              </React.Fragment>
+            } />
+        </ListItem>
+      </List>
+      ))
+     
     );
   };
   
   export default ProductsOpinions;
+
