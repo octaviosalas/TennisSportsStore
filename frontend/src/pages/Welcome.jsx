@@ -5,6 +5,7 @@ import axios from 'axios'
 import NavBar from './NavBar'
 import { useEffect, useState } from 'react'
 import { UserContext } from '../store/user.context.js'
+import SideBar from '../components/SideBar'
 
 const Welcome = () => {
 
@@ -33,11 +34,18 @@ const Welcome = () => {
 
   return (
     <div className='welcome'>
-          <NavBar />
-      <div>
-           <h4>Welcome {name}!</h4>
-           <p>You have successfully created your account. You can start looking at our products and buy what you want!!</p>
-      </div>
+          <div className='navbar-wrapper'>
+              <NavBar/>
+          </div>
+
+          <div className='sidebar-wrapper'>    
+            <SideBar/>
+           </div>
+   
+            <div>
+                <h4>Welcome {name}!</h4>
+                <p>You have successfully created your account. You can start looking at our products and buy what you want!!</p>
+           </div>
 
 
         

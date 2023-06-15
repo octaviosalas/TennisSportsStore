@@ -6,19 +6,23 @@ import SizesShoes from './SizesShoes'
 import Sizes from './Sizes'
 import { useContext, useEffect, useState } from 'react'
 import CartContext from '../store/cart.context.js'
-import { Link } from 'react-router-dom'
+
 import axios from "axios"
 import ProductsOpinions from '../pages/ProductsOpinions'
+
 
 import * as React from 'react';
 import Button from '@mui/material/Button';
 import DeleteIcon from '@mui/icons-material/Delete';
 import SendIcon from '@mui/icons-material/Send';
 import Stack from '@mui/material/Stack';
+import Carousel from 'react-bootstrap/Carousel';
 
 const StructureDetail = ({product}) => {
      
     const carritoCtx = useContext(CartContext)
+
+
 
     const [dataOpinions, setDataOpinions] = useState([])
     const [showOpinions, setShowOpinions] = useState(false)
@@ -121,4 +125,11 @@ const StructureDetail = ({product}) => {
 }
 
 export default StructureDetail
-
+/*
+<Carousel>
+{product.img.map((image, index) => (
+    <Carousel.Item key={index}>
+       <img className="d-block w-100" src={image} alt={`Slide ${index + 1}`} />
+       </Carousel.Item>
+                    ))}
+      </Carousel>*/

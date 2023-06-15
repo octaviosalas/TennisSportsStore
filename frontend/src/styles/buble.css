@@ -17,4 +17,16 @@
     align-items: center;
     justify-content: center;
     background-color: #ececec;
+    
+}
+
+
+.sidebar-wrapper { 
+    float: right;
+    width: 10%; 
+}
+
+.navbar-wrapper { 
+    float: left;
+     width: 70%; 
 }
