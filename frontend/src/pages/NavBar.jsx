@@ -1,3 +1,4 @@
+
 import React from 'react'
 import { useState, useEffect } from 'react'
 import carrito from "../img/carrito.jpg"
@@ -69,3 +70,5 @@ const NavBar = () => {
 }
 
 export default NavBar
+
+

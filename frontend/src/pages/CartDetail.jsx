@@ -38,15 +38,14 @@ const CartDetail = () => {
    
      
        {cartCtx.products.length !== 0 ? <ButtonConfirmate />
-       :
-        <>
-        <div>
-        <p>There are no products in the cart</p>
-         <br />
-         <Link to={`/welcome/${id}`}><p>Back home</p></Link>
-        </div>
-      
-        </>
+            :
+            <>
+              <div>
+                <p>There are no products in the cart</p>
+                <br />
+                <Link to={`/welcome/${id}`}><p>Back home</p></Link>
+              </div>
+            </>
        }
        
       

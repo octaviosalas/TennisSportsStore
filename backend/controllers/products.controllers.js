@@ -69,9 +69,13 @@ export const favouriteProducts = async (req, res) => {
   };
 
 export const deleteFavourite = async (req, res) => { 
+  
+     const { userId } = req.params;
+     const { id: productId } = req.body;
+      
     try {
-        await Favs.findByIdAndDelete(req.body.id);
-        res.send("Producto Eliminado de la seccion de Favoritos")
+        await Favs.deleteMany({ userId, productId });
+        res.send("Producto eliminado de la sección de Favoritos");    
      } catch (error) {
         console.log(error)
      }

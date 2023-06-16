@@ -6,7 +6,7 @@ import { UserContext } from '../store/user.context.js'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 
-const ShippingInformation = ({prod}) => {
+const ShippingInformation = ({prod, closeShipping}) => {
   
     const cartctx = useContext(CartContext)
     const userCtx = useContext(UserContext)
@@ -27,6 +27,7 @@ const ShippingInformation = ({prod}) => {
 
     const closeSh = () => { 
       setCloseShip(true)
+      closeShipping()
     }
     
     const openSh = () => { 
@@ -104,8 +105,8 @@ const ShippingInformation = ({prod}) => {
       
         {closeShip ? 
          <>
-          <Link to={"/rackets"}><p className='back-home' title='Back to the Home'>Back Home</p></Link> 
-          <p className='open-shipping' title='Cordinate Shipping' onClick={() => openSh()}>Coordinate Shipping</p>
+          <Link to={"/rackets"}><p className='back-home' title='Back to the Home' >Back Home</p></Link> 
+          
          </>  : 
         <>
           <div className="header">

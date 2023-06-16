@@ -8,7 +8,7 @@ productsRoutes.get("/shoes", getShoes)
 productsRoutes.get("/rackets", getRackets)
 productsRoutes.get("/tshirts", getTshirts)
 productsRoutes.put("/favourite", markAsFavourite)
-productsRoutes.post("/deleteFavourite", deleteFavourite)
+productsRoutes.post("/deleteFavourite/:userId", deleteFavourite)
 productsRoutes.get("/favouritesProducts/:userId", favouriteProducts)
 productsRoutes.get("/getImages/:id", getImages)
 
