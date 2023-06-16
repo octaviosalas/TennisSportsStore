@@ -22,6 +22,7 @@ import Button from '@mui/material/Button';
 import DeleteIcon from '@mui/icons-material/Delete';
 import SendIcon from '@mui/icons-material/Send';
 import Stack from '@mui/material/Stack';
+import ButtonConfirmate from "./ButtonConfirmate";
 
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
@@ -48,8 +49,9 @@ const StructureCartDetail = ({productsToBuy}) => {
 
   return (
 
-    
-    <Card sx={{ maxWidth: 345, height:"65vh", width:"40vh",  marginTop:"2vh", marginLeft:"2vh" }}>
+    <div>
+
+<Card sx={{ maxWidth: 345, height:"65vh", width:"40vh",  marginTop:"2vh", marginLeft:"2vh" }}>
     <CardHeader
       avatar={ <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe"> R</Avatar> }
       action={<IconButton aria-label="settings"> <MoreVertIcon /> </IconButton>}
@@ -76,10 +78,15 @@ const StructureCartDetail = ({productsToBuy}) => {
       
     </Collapse>
   </Card>
+
+     {crtCtx.length !== 0 && <ButtonConfirmate/>}
+    </div>
+    
+    
               
   
  
-    
+  
     
   )
 }

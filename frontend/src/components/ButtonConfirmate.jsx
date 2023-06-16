@@ -31,10 +31,24 @@ const ButtonConfirmate = () => {
 
     return ( 
       <div className='gral-confirmate' style={{marginTop:"2vh"}}>
-             { showShipping ? null :  <Stack direction="row" spacing={2}>
+
+
+   
+         <div>
+            { showShipping ? null :  <Stack direction="row" spacing={2}>
                 <Button variant="outlined" onClick={() =>  showTheShipping()}> Cordinate Shipping </Button>
               </Stack> }
-              {showShipping ? <ShippingInformation closeShipping={closeShipping} prod={cartCtx.products}/> : null}
+         </div>
+
+         <div>
+             {showShipping ? <ShippingInformation closeShipping={closeShipping} prod={cartCtx.products}/> : null}
+         </div>
+
+        
+  
+        
+             
+            
          
       </div>
     )
