@@ -1,8 +1,13 @@
-import React, { useContext } from 'react'
+import React from "react"
+import { useContext } from "react"
 import "../styles/review.css"
 import { useEffect, useState } from 'react'
 import { UserContext } from '../store/user.context.js'
 import axios from 'axios'
+import ModalOpinion from './ModalOpinion'
+
+
+
 
 
 
@@ -16,6 +21,7 @@ const ReviewProducts = ({idproduct}) => {
       const [review, setReview] = useState("")
       const [userId, setUserId] = useState(userCtx.userId);
       const [name, setName] = useState("")
+      const [showModal, setShowModal] = useState(true)
 
     useEffect(() => {
         setUserId(userCtx.userId);
@@ -40,18 +46,14 @@ const ReviewProducts = ({idproduct}) => {
         }
      }
 
-     const sendOpinion = () => { 
-        const myOpinion = { 
-          name: name, 
-          punctuation:punctuation,
-          review: review,
-          userId: userId,
-          productId: idproduct //el id del producto que recibe la opinion es el ID que me llega por props. Osea, el ID del producto que seleccione
-
-        }
-        axios.post("http://localhost:4000/saveReview", myOpinion)
-             
+     const showModalNow = () => { 
+       setShowModal(false)
      }
+
+     const dontShowModalNow = () => { 
+      setShowModal(true)
+    }
+    
 
      return (
 
@@ -59,7 +61,7 @@ const ReviewProducts = ({idproduct}) => {
 
        
          <div className="container-review">
-      <h2>Send your review</h2>
+        <h2>Send your review</h2>
         <form className='form-review'>
         <input type="text" id="username" className='input-review' value={name} onChange={(e) => setName(e.target.value)}/>
         
@@ -71,7 +73,7 @@ const ReviewProducts = ({idproduct}) => {
         <label htmlFor="comment" className='label-review'>Opinión:</label>
         <textarea id="comment" placeholder="Escriba su opinión aquí" required value={review} onChange={(e) => setReview(e.target.value)}></textarea>
         
-        <button type="submit"  onClick={() => sendOpinion()}>Send Review</button>
+     { showModal ?  <button type="submit"  onClick={() => showModalNow()}>Send Review</button> : <ModalOpinion name={name} review={review} punctuation={punctuation} userId={userId} idproduct={idproduct} onClose={dontShowModalNow}/>}
       </form>
     </div>
         

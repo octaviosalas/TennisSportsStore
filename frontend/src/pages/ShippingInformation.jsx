@@ -146,7 +146,7 @@ const ShippingInformation = ({prod, closeShipping}) => {
           {prod.map((prod) => (
             <div key={prod.id}>
               <div className="div-img-shipping">
-                <img src={prod.img} alt="" className="shipping-img" />
+                <img src={prod.img[0]} alt="" className="shipping-img" />
               </div>
 
               <div className="div-shipping-some">

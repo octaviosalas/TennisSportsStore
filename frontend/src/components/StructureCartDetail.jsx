@@ -49,7 +49,7 @@ const StructureCartDetail = ({productsToBuy}) => {
 
   return (
 
-    <div>
+    <div style={{display:"flex"}}>
 
 <Card sx={{ maxWidth: 345, height:"65vh", width:"40vh",  marginTop:"2vh", marginLeft:"2vh" }}>
     <CardHeader
@@ -79,7 +79,6 @@ const StructureCartDetail = ({productsToBuy}) => {
     </Collapse>
   </Card>
 
-     {crtCtx.length !== 0 && <ButtonConfirmate/>}
     </div>
     
     

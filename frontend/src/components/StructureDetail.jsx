@@ -7,17 +7,15 @@ import SizesShoes from './SizesShoes'
 import Sizes from './Sizes'
 import { useContext, useEffect, useState } from 'react'
 import CartContext from '../store/cart.context.js'
-
 import axios from "axios"
 import ProductsOpinions from '../pages/ProductsOpinions'
-
-
 import * as React from 'react';
 import Button from '@mui/material/Button';
 import DeleteIcon from '@mui/icons-material/Delete';
-import SendIcon from '@mui/icons-material/Send';
 import Stack from '@mui/material/Stack';
 import Carousel from 'react-bootstrap/Carousel';
+import WIthOutOpinionsModal from "./WIthOutOpinionsModal"
+
 
 const StructureDetail = ({product}) => {
      
@@ -130,14 +128,8 @@ const StructureDetail = ({product}) => {
 
          
 
-              {msjNothing &&  
-
-               <div className='div-msj-nothing'>
-                     <p>There are no reviews for this product so far.</p> 
-                     <button className='btn-x' onClick={() => closeMsj()}>X</button>
-               </div>
-
-               } 
+              {msjNothing &&   <WIthOutOpinionsModal onClose={closeMsj}/>
+              } 
      
           
               
