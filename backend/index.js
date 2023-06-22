@@ -27,6 +27,12 @@ app.use(buyRoutes)
 app.use(reviewsRoutes)
 app.use(shippingDataRoutes)
 
+app.use(cors( { 
+     origin:["https://deploy-mern-1whq.vercel.app"],
+     methods: ["POST", "GET"],
+     credentials: true
+}))
+
 
 
 
