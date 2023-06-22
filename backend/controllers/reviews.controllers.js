@@ -31,6 +31,7 @@ export const saveReview = async (req, res) => {
 export const getReviews = async (req, res) => { 
 
    const {productId} = req.params
+   console.log("El ID que me esta llegando para buscar opiniones es: " + productId)
 
    try {
         const getOpinions = await Reviews.find({productId: productId})

@@ -14,7 +14,7 @@ import CartDetail from "./pages/CartDetail";
 import Favourites from "./pages/Favourites";
 import MyBuys from "./pages/MyBuys";
 import ReviewProducts from "./components/ReviewProducts";
-import ProductsOpinions from "./pages/ProductsOpinions";
+
 import ShippingInformation from "./pages/ShippingInformation";
 import Settings from "./pages/Settings";
 
@@ -45,7 +45,7 @@ function App() {
                  <Route path="/settings" element={<Settings />}></Route>
                
                  <Route path="/review/:userId" element={<ReviewProducts />}></Route>
-                 <Route path="/opinions/:productid" element={<ProductsOpinions />}></Route>
+           
                  <Route path="/shippingInformation" element={<ShippingInformation />}></Route>
               </Routes>
 
