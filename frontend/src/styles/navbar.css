@@ -1,14 +1,13 @@
 
 .conteiner-gral-nav {
-    background-color: white;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 999;
     padding: 10px 20px;
-   background-color:  #f2f2f2;
-   margin-bottom: 10px;
+    height: 9.7vh;
+    margin-bottom: 10px;
   }
 
   
@@ -83,7 +82,10 @@
     background-color: #f2f2f2;
   }
 
-  .cont-sections-users { 
+ .item-avat:hover { 
+    background-color:"black";
+ } 
 
-  }
-  
+ .item-avat { 
+  margin: 5vh;
+ }

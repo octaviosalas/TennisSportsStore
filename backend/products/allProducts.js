@@ -19,7 +19,7 @@ export const allProducts = [
     }, 
     { 
         "id": 3,
-        "name": "Babolat Aero Rafa",
+        "name": "Babolat Aero ",
         "price": 113200,
         "category": "rackets",
         "brand": "babolat",

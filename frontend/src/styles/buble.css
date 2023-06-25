@@ -1,12 +1,13 @@
 .buble-item { 
     border-radius: 50%;
-    background-color: #ee644c; ;
+    background-color: black; 
     width: 29px;
     height: 26px;
     font-size: 12px;
     position: absolute;
     right: 9px;
     bottom: 35px;
+    color:"white"
 }
 
 .welcome { 
