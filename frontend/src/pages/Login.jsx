@@ -46,6 +46,7 @@ export default function Login() {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const [load, setLoad ] = useState(false)
+  const [incorrectPassword, setIncorrectPassword] = useState(false)
 
  
 
@@ -66,7 +67,9 @@ export default function Login() {
            })
            .catch((err) => { 
             console.log(err)
-            alert("El usuario que ingresaste no esta registrado. Por favor, registrate para iniciar sesion")
+          
+            alert(err)
+            console.log("xfnaskfhkasp")
            })
   } 
 
@@ -75,17 +78,9 @@ export default function Login() {
 
 
 
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get('email'),
-      password: data.get('password'),
-    });
-  };
-
   return (
+    
+    <>
     <ThemeProvider theme={defaultTheme}>
       <Grid container component="main" sx={{ height: '100vh' }}>
         <CssBaseline />
@@ -106,7 +101,7 @@ export default function Login() {
               <LockOutlinedIcon />
             </Avatar>
             <Typography component="h1" variant="h5">  Sign in </Typography>
-            <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 1 }}>
+            <Box component="form" noValidate  sx={{ mt: 1 }}>
               <TextField margin="normal" required fullWidth id="email" label="Email Address"  name="email" autoComplete="email" autoFocus value={email}   onChange={(e) => setEmail(e.target.value)}/>
               <TextField margin="normal" required  fullWidth name="password" label="Password" type="password" id="password"  autoComplete="current-password" value={password}  onChange={(e) => setPassword(e.target.value)}/>
               <FormControlLabel control={<Checkbox value="remember" color="primary" />} label="Remember me"
@@ -130,5 +125,11 @@ export default function Login() {
         </Grid>
       </Grid>
     </ThemeProvider>
+
+      <div>
+          {incorrectPassword && <p>error</p>}
+      </div>
+    </>
+  
   );
 }

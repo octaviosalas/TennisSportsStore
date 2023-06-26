@@ -91,7 +91,7 @@ const Settings = () => {
       <Container component="main" maxWidth="xs">
         <CssBaseline />
         <Box sx={{ marginTop: 8, display: 'flex', flexDirection: 'column', alignItems: 'center',}}>
-          <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
+          <Avatar sx={{ m: 1, bgcolor: '#ee644c'}}>
             <LockOutlinedIcon />
           </Avatar>
           <Typography component="h1" variant="h5"> Change your Password</Typography>
@@ -103,7 +103,7 @@ const Settings = () => {
             <TextField margin="normal" required fullWidth  id="Last Password" label="Last Password" name="Last Password" autoComplete="Last Password" autoFocus value={lastPassword} onChange={(e) => setLastPassword(e.target.value)}/>
             <TextField margin="normal" required fullWidth name="New Password" label="New Password" type="password" id="New Password" autoComplete="current-password" value={newPassword} onChange={(e) => setNewPassword(e.target.value)}/>
             
-            <Button type="submit" fullWidth  variant="contained" sx={{ mt: 3, mb: 2 }}  onClick={() => changeUserData()}>Save Changes </Button>
+            <Button type="submit" fullWidth  variant="contained" sx={{ mt: 3, mb: 2, backgroundColor:"#ee644c" }}  onClick={() => changeUserData()}>Save Changes </Button>
            
           </Box>
         </Box>

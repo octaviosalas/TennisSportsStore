@@ -151,9 +151,9 @@ function NavBar() {
             >
            
                 <MenuItem sx={{display:"inline-block"}} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center" sx={{margin:"1vh"}} >Profile</Typography>
+                 <Link to={"/settings"} className='link'><Typography textAlign="center" sx={{margin:"1vh"}} >Profile</Typography></Link> 
                   <Link to={"/usercart"} className='link'>  <Typography textAlign="center" sx={{margin:"1vh"}}  > My Cart</Typography></Link>
-                  <Typography textAlign="center" sx={{margin:"1vh"}}  onClick={() => logOut()}>Logout</Typography>
+                  <Typography textAlign="center" sx={{margin:"1vh"}}  onClick={() => logOut()} >Logout</Typography>
                 </MenuItem>
             </Menu>
           </Box>
