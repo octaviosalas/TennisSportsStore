@@ -17,15 +17,13 @@ import AdbIcon from '@mui/icons-material/Adb';
 
 import { useState, useEffect } from 'react'
 import carrito from "../img/carrp.png"
-import ball from "../img/ball.png"
 import SportsTennisIcon from '@mui/icons-material/SportsTennis';
 import axios from 'axios'
-import "../styles/navbar.css"
 import { Link, useParams } from 'react-router-dom'
 import { UserContext } from '../store/user.context.js'
 import { useContext } from 'react'
 import BubleCart from '../components/BubleCart'
-import SectionsForUsers from '../components/SectionsForUsers'
+import { useNavigate } from 'react-router-dom';
 
 const pages = ['Products', 'Pricing', 'Blog'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -35,6 +33,7 @@ function NavBar() {
 
 
   const {id} = useParams()
+  const navigate = useNavigate()
 
   const userCtx = useContext(UserContext);
   const [userId, setUserId] = useState(userCtx.userId);
@@ -52,6 +51,11 @@ function NavBar() {
          .catch(err => console.log(err))
         
  }, [])
+
+ const logOut = () => { 
+    setUserId(null)
+    navigate("/login")
+ }
 
 
 
@@ -98,11 +102,11 @@ function NavBar() {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+            
+                <MenuItem  onClick={handleCloseNavMenu}>
+                 <Link to={`/welcome/${userId}`}> <Typography textAlign="center">Home</Typography></Link>
                 </MenuItem>
-              ))}
+      
             </Menu>
           </Box>
           <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
@@ -116,16 +120,16 @@ function NavBar() {
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
-            <div style={{display:"flex"}}>
+            <div style={{display:"flex", position:"relative"}}>
            
-                <p className='name-sesion' style={{marginTop:"1vh", position:"relative", color:"white", textDecoration:"none", fontSize:"1.9vh", whiteSpace: 'nowrap'}} >{name}</p>
+                <p className='name-sesion' style={{marginTop:"2vh", position:"relative", color:"white", textDecoration:"none", fontSize:"1.5vh", whiteSpace: 'nowrap'}} >{name}</p>
             
        
 
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
               <BubleCart /> 
-              <Avatar alt="Remy Sharp" src={carrito}  sx={{ marginBottom:"2vh", width:"4vh", height:"4.2vh"}}/> </IconButton>
+              <Avatar alt="Remy Sharp" src={carrito}  sx={{ marginBottom:"1vh", width:"4vh", height:"4.2vh"}}/> </IconButton>
             </Tooltip>
             </div>
  
@@ -149,11 +153,8 @@ function NavBar() {
                 <MenuItem sx={{display:"inline-block"}} onClick={handleCloseUserMenu}>
                   <Typography textAlign="center" sx={{margin:"1vh"}} >Profile</Typography>
                   <Link to={"/usercart"} className='link'>  <Typography textAlign="center" sx={{margin:"1vh"}}  > My Cart</Typography></Link>
-                  <Typography textAlign="center" sx={{margin:"1vh"}}  >Acount</Typography>
-                  <Typography textAlign="center" sx={{margin:"1vh"}}  >Dashboard</Typography>
-                  <Typography textAlign="center" sx={{margin:"1vh"}}  >Logout</Typography>
+                  <Typography textAlign="center" sx={{margin:"1vh"}}  onClick={() => logOut()}>Logout</Typography>
                 </MenuItem>
-           
             </Menu>
           </Box>
         </Toolbar>

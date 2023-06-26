@@ -18,6 +18,11 @@ import Stack from '@mui/material/Stack';
 import Carousel from 'react-bootstrap/Carousel';
 import WIthOutOpinionsModal from "./WIthOutOpinionsModal"
 import PruebaOpinions from "./PruebaOpinions";
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+
+
+
+
 
 
 const StructureDetail = ({product}) => {
@@ -98,7 +103,8 @@ const StructureDetail = ({product}) => {
 
                <div>
                <PruebaOpinions productId={id}/>
-               </div>
+              
+             </div>
          </div>
 
          <div className='conteiner-buy-section'>
