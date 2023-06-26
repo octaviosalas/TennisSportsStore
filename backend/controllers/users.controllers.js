@@ -51,7 +51,8 @@ export const registerUser = async (req, res) => {
 
 
     export const loginUser = async (req, res) => {
-        const { email, password } = req.body;                                                      //Te va a llegar esto en el request
+        const { email, password } = req.body;  
+        console.log(req.body)                                                    //Te va a llegar esto en el request
             
         try {                                                                                    //Intenta primero
           let user = await User.findOne({ email });                                          //buscar en la db ese correo que te llego
@@ -74,7 +75,7 @@ export const registerUser = async (req, res) => {
             }
           });
         } catch (error) {
-          res.send("No existe el usuario con esos datos");
+          res.json({mensaje:"No existe un usuario con esos datos"});
           console.log("No existe el usuario con esos datos");                    //si no encontraste nada..
         }
       };
