@@ -109,25 +109,23 @@ function NavBar() {
          
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
          
-          <Link to={"/rackets"} className='link' > <Button onClick={handleCloseNavMenu} sx={{ my: 2, color: 'white', display: 'block' }} >Rackets</Button></Link>
-              <Button onClick={handleCloseNavMenu} sx={{ my: 2, color: 'white', display: 'block' }} >Shoes</Button>
-              <Button onClick={handleCloseNavMenu} sx={{ my: 2, color: 'white', display: 'block' }} >T-Shirts</Button>
+          <Link to={"/rackets"} className='link'> <Button onClick={handleCloseNavMenu} sx={{ my: 2, color: 'white', display: 'block' }} >Rackets</Button></Link>
+             <Link to={"/shoes"} className='link'> <Button onClick={handleCloseNavMenu} sx={{ my: 2, color: 'white', display: 'block' }} >Shoes</Button></Link>
+            <Link to={"/tshirts"} className='link'><Button onClick={handleCloseNavMenu} sx={{ my: 2, color: 'white', display: 'block' }} >T-Shirts</Button></Link> 
         
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
-            <div>
-            <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+            <div style={{display:"flex"}}>
+           
                 <p className='name-sesion' style={{marginTop:"1vh", position:"relative", color:"white", textDecoration:"none", fontSize:"1.9vh", whiteSpace: 'nowrap'}} >{name}</p>
-              </IconButton>
-            </Tooltip>
+            
+       
 
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-              <BubleCart />
-              <Avatar alt="Remy Sharp" src={carrito}  sx={{ marginBottom:"2vh" }}/>
-              </IconButton>
+              <BubleCart /> 
+              <Avatar alt="Remy Sharp" src={carrito}  sx={{ marginBottom:"2vh", width:"4vh", height:"4.2vh"}}/> </IconButton>
             </Tooltip>
             </div>
  

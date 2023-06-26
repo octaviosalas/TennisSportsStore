@@ -121,7 +121,7 @@ const PruebaShippingInformation = ({cartProducts}) => {
         <div style={{ display: "flex", justifyContent: "center", alignItems: "center", marginTop:"2vh" }}>
            <Button variant="primary" onClick={handleShow} className="me-2" style={{ width: "20vh", height: "3.5vh" }}> Buy </Button>
         </div>
-        <Offcanvas show={isOffCanvasVisible} onHide={handleClose} backdrop="static" {...props} style={{height:"49vh"}}>
+        <Offcanvas show={isOffCanvasVisible} onHide={handleClose} backdrop="static" {...props} style={{height:"49vh", marginTop:"9.7vh"}}>
              <Offcanvas.Header closeButton>
                  <Offcanvas.Title style={{fontSize:"1.5vh"}}>Insert the shipping information to finalize the purchase</Offcanvas.Title> 
                 
@@ -185,7 +185,7 @@ const PruebaShippingInformation = ({cartProducts}) => {
                            
                                <div style={{float:"right", width:"45vh", margin:"8vh"}}>
                                        <p style={{fontSize: "12px"}}>Total Amount: {total} ARS</p>
-                                       <Button variant="primary" type="submit" style={{width:"20vh", marginLeft:"12vh"}} onClick={() =>  functionsForSubmit()}>  Confirm Buy </Button> 
+                                       <Button variant="primary" type="submit" style={{width:"20vh"}} onClick={() =>  functionsForSubmit()}>  Confirm Buy </Button> 
                                </div>
                         
 

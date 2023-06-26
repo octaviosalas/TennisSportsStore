@@ -51,18 +51,11 @@ const CartDetail = () => {
         load ? <Spinner  animation="border" role="status"><span className="visually-hidden">Loading...</span></Spinner>
                    : 
                    <>
-                    <div style={{display:"flex"}}>
-                         {cartCtx.products.map((p) => <StructureCartDetail productsToBuy={p} />)}
-                     </div>
-
-                 
-                    <PruebaShippingInformation cartProducts={cartCtx.products} />
-                   </>
-                  
-                 
-                
-          
-        
+                      <div style={{display:"flex"}}>
+                           {cartCtx.products.map((p) => <StructureCartDetail productsToBuy={p} />)}
+                       </div>
+                          <PruebaShippingInformation cartProducts={cartCtx.products} />
+                   </>     
       }
     </div>
   </div>

@@ -66,7 +66,7 @@ const PruebaOpinions = ({ productId }) => {
           <p variant="primary" onClick={handleShow} style={{color:"black", textDecoration:"underline", cursor:"pointer", fontSize:"1.4vh"}}> Know Opinions about the Product </p>
   
           <Offcanvas show={show} onHide={handleClose}>
-            <Offcanvas.Header closeButton>
+            <Offcanvas.Header closeButton style={{marginTop:"9vh"}}>
               <Offcanvas.Title>Product Opinions</Offcanvas.Title>
             </Offcanvas.Header>
             <Offcanvas.Body>

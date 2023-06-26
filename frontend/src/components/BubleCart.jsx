@@ -5,16 +5,12 @@ import CartContext from '../store/cart.context.js'
 
 const BubleCart = () => {
 
-
-
     const carritoCtx = useContext(CartContext)
     const cant =  carritoCtx.products.length 
     
-
   return (
-    <div>
-        {carritoCtx.products.length >= 1 ? <button className='buble-item'>{cant}</button> : null}
-         
+    <div >
+        {carritoCtx.products.length >= 1 ? <button  className='buble-item'>{cant}</button> : null}   
     </div>
   )
 }
