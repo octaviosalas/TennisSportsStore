@@ -15,6 +15,9 @@ import Favourites from "./pages/Favourites";
 import MyBuys from "./pages/MyBuys";
 import ReviewProducts from "./components/ReviewProducts";
 import Settings from "./pages/Settings";
+import "./index.css"
+
+
 
 
 
@@ -49,7 +52,8 @@ function App() {
               
               </Routes>
             
-
+                <p className="text-5xl">aaaa</p>
+            
 
 
            </CartProvider>
