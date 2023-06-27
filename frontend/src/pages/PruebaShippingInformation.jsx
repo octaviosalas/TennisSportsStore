@@ -1,6 +1,7 @@
+
 import React from 'react'
 import { useState } from 'react';
-import Button from 'react-bootstrap/Button';
+
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
@@ -9,6 +10,11 @@ import CartContext from '../store/cart.context.js'
 import { useContext, useEffect } from 'react'
 import axios from "axios"
 import { UserContext } from '../store/user.context';
+import Button from '@mui/material/Button';
+import DeleteIcon from '@mui/icons-material/Delete';
+import SendIcon from '@mui/icons-material/Send';
+import Stack from '@mui/material/Stack';
+
 
 
 const PruebaShippingInformation = ({cartProducts}) => {
@@ -101,9 +107,9 @@ const PruebaShippingInformation = ({cartProducts}) => {
     function OffCanvasExample({ name, ...props }) {
     const [show, setShow] = useState(false);
   
+   
     const handleClose = () => {
-        
-        setIsOffCanvasVisible(false)
+      setIsOffCanvasVisible(false);
     };
 
     const handleShow = () => {
@@ -114,15 +120,19 @@ const PruebaShippingInformation = ({cartProducts}) => {
         e.stopPropagation(); // Evita la propagación del evento de clic
         getDataOfShipping();
       };
-    
+      
+    // <Button variant="primary" onClick={handleShow} className="me-2" style={{ width: "20vh", height: "3.5vh" }}> Buy </Button>
   
     return (
       <>
         <div style={{ display: "flex", justifyContent: "center", alignItems: "center", marginTop:"2vh" }}>
-           <Button variant="primary" onClick={handleShow} className="me-2" style={{ width: "20vh", height: "3.5vh" }}> Buy </Button>
+     
+       <Stack direction="row"  spacing={2}>  <Button onClick={handleShow} sx={{background:"#ee644c", color:"white"}} variant="contained" endIcon={<SendIcon />}> Buy </Button> </Stack>
         </div>
-        <Offcanvas show={isOffCanvasVisible} onHide={handleClose} backdrop="static" {...props} style={{height:"49vh", marginTop:"9.7vh"}}>
-             <Offcanvas.Header closeButton>
+
+      
+        <Offcanvas show={isOffCanvasVisible} backdrop="static" {...props} style={{height:"49vh", marginTop:"9.7vh"}}>
+             <Offcanvas.Header  closeButton onClick={handleClose}>
                  <Offcanvas.Title style={{fontSize:"1.5vh"}}>Insert the shipping information to finalize the purchase</Offcanvas.Title> 
                 
                  </Offcanvas.Header>
@@ -185,7 +195,7 @@ const PruebaShippingInformation = ({cartProducts}) => {
                            
                                <div style={{float:"right", width:"45vh", margin:"8vh"}}>
                                        <p style={{fontSize: "12px"}}>Total Amount: {total} ARS</p>
-                                       <Button variant="primary" type="submit" style={{width:"20vh"}} onClick={() =>  functionsForSubmit()}>  Confirm Buy </Button> 
+                                       <Stack direction="row"  spacing={2}>  <Button onClick={() =>  functionsForSubmit()} sx={{background:"#ee644c", color:"white"}} variant="contained" endIcon={<SendIcon />}> Confirm </Button> </Stack>
                                </div>
                         
 
@@ -210,5 +220,4 @@ const PruebaShippingInformation = ({cartProducts}) => {
 }
 
 export default PruebaShippingInformation
-
 

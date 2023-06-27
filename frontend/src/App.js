@@ -1,4 +1,5 @@
 import {Routes, Route} from "react-router-dom"
+import * as React from 'react'
 import './App.css';
 import "./pages/Login"
 import Login from "./pages/Login";
@@ -15,7 +16,7 @@ import Favourites from "./pages/Favourites";
 import MyBuys from "./pages/MyBuys";
 import ReviewProducts from "./components/ReviewProducts";
 import Settings from "./pages/Settings";
-import "./index.css"
+
 
 
 
@@ -31,31 +32,22 @@ function App() {
 
      <UserProvider>
       <CartProvider>
-
-        
-              <Routes>
+     
+        <Routes>
                  <Route path="/" element={<Register />}></Route>
                  <Route path="/login" element={<Login />}></Route>
                  <Route path="/welcome/:id" element={<Welcome />}></Route>
                  <Route path="/rackets" element={<Rackets />}></Route>
                  <Route path="/shoes" element={<Shoes />}></Route>
                  <Route path="/tshirts" element={<Tshirts />}></Route>
-                 <Route path="/viewDetail/:id" element={<ViewDetailProduct />}></Route>
-                
+                 <Route path="/viewDetail/:id" element={<ViewDetailProduct />}></Route>               
                  <Route path="/usercart" element={<CartDetail />}></Route>
                  <Route path="/favourites" element={<Favourites />}></Route>
                  <Route path="/myBuys/:userId" element={<MyBuys />}></Route>
                  <Route path="/settings" element={<Settings />}></Route>
-               
                  <Route path="/review/:userId" element={<ReviewProducts />}></Route>
-           
-              
-              </Routes>
-            
-                <p className="text-5xl">aaaa</p>
-            
-
-
+               </Routes>
+     
            </CartProvider>
       </UserProvider>
     </div>

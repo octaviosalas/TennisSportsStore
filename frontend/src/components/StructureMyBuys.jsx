@@ -56,7 +56,7 @@ const StructureMyBuys = ({ buys }) => {
 
         <Grid item>
           <ButtonBase sx={{ width: 128, height: 128 }}>
-            <Img alt="complex" src={buys.img} style={{height:"30vh", width:"40vh"}}/>
+            <Img alt="complex" src={buys.img[0]} style={{height:"30vh", width:"40vh"}}/>
           </ButtonBase>
         </Grid>
         <Grid item xs={12} sm container>
@@ -75,7 +75,7 @@ const StructureMyBuys = ({ buys }) => {
     </Paper>
     <div className='review-component'>
          {showReview && <ReviewProducts idproduct={buys.id}/>}
-         {showReview ? <p style={{cursor: "pointer"}} onClick={() => dontShowReviewComponent()}>Close </p> : null}
+         {showReview ? <p style={{cursor: "pointer", textAlign:"center", fontSize:"1.4vh"}} onClick={() => dontShowReviewComponent()}>Close </p> : null}
       </div>
 
     </div>

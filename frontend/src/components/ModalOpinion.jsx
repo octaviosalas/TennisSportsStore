@@ -28,8 +28,8 @@ const ModalOpinion = ({name, review, punctuation, userId, idproduct, onClose }) 
      }
 
   return ( 
-      <Modal show={true} onHide={onClose}>
-      <Modal.Header closeButton onClick={() => onClose()}>
+      <Modal show={true} onHide={onClose} style={{marginTop:"4.2vh"}}>
+      <Modal.Header closeButton onClick={() => onClose()} style={{textAlign:"center"}}>
         <Modal.Title style={{color:"#ee644c"}}>Please, check your Opinion! </Modal.Title>
       </Modal.Header>
       <Modal.Body> Are you sure about your opinion about the product? Keep in mind that other users will see it?  </Modal.Body>

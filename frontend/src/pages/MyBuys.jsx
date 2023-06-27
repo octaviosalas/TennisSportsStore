@@ -68,7 +68,7 @@ const MyBuys = () => {
             <h4 style={{marginBottom: "1vh", textAlign: "center", fontWeight: "bold"}}>These are your last purchases</h4>
             {userBuys.map((b) => <StructureMyBuys buys={b}/>)}
 
-            <div>
+            <div style={{textAlign:"center"}}>
                   <Link to={`/welcome/${userId}`} className='lnk'><p title='ir al inicio'>Back home</p></Link>
             </div>
             
